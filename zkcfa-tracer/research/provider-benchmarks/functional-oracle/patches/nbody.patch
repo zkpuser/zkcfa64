@@ -1,0 +1,11 @@
+--- source/embench-iot-applications/nbody/nbody.c
++++ source/embench-iot-applications/nbody/nbody.c
+@@ -195,7 +195,7 @@
+       /*printf("%.9f\n", bodies_energy(solar_bodies, BODIES_SIZE)); */
+     }
+   /* Result is known good value for total energy. */
+-  return double_eq_beebs(tot_e, -16.907516382852478);
++  return double_eq_beebs(tot_e, -0.16907516382852447);
+ }
+ 
+ 

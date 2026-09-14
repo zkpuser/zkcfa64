@@ -1,0 +1,9 @@
+[submodule "zkcfa-binius64/binius64"]
+	path = zkcfa-binius64/binius64
+	url = https://github.com/zkpuser/binius64.git
+[submodule "zkcfa-plonk/plonk"]
+	path = zkcfa-plonk/plonk
+	url = https://github.com/zkpuser/plonk.git
+[submodule "zekra/ZEKRA"]
+	path = zekra/ZEKRA
+	url = https://github.com/zkpuser/ZEKRA.git

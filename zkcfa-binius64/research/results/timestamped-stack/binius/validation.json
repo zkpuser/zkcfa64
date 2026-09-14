@@ -1,0 +1,13 @@
+{
+  "production_negative_regression": {
+    "command": "RUSTFLAGS='-C target-cpu=native' cargo test --locked --offline --release --features stack-control --example stack_control device_signed_stack_violations_fail_raw_constraints_with_valid_membership",
+    "passed": true,
+    "scope": "wrong return, wrong timestamp, unmatched call, empty-stack return, and balanced underflow across both raw24 EP encodings and both path modes"
+  },
+  "determinism_spot_check": {
+    "case_id": "L0064-D0008",
+    "pilot_and_formal_counts_identical": true,
+    "pilot_log": "logs/pilot.json"
+  },
+  "source_hashes_still_match": true
+}

@@ -1,0 +1,2 @@
+control,validated,original_sample_satisfied,repaired_verified,r1cs_constraints,encoded_adjacency_max_bits,witness_operand,truncated_memory_operand,excluded_from_formal_timings
+SmartMemory-native-field,True,False,True,71419,39,274911473666,33566722,True

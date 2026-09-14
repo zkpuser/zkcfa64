@@ -1,0 +1,100 @@
+OUT ?= build/static
+QEMU_SRC ?= /opt/qemu
+QEMU_AARCH64 ?= $(QEMU_SRC)/build/qemu-aarch64
+AARCH64_CC ?= aarch64-linux-gnu-gcc
+HOST_CC ?= gcc
+PYTHON ?= python3
+export PYTHONDONTWRITEBYTECODE := 1
+
+APP := $(OUT)/crc32-aarch64
+START_OBJ := $(OUT)/start.o
+CRC32_OBJ := $(OUT)/crc32.o
+PLUGIN := $(OUT)/trace_scope.so
+REGISTRY := $(OUT)/registry
+TRACE := $(OUT)/trace.log
+PATH_OUT := $(REGISTRY)/recorded_path
+EVIDENCE := $(REGISTRY)/evidence.json
+RUNTIME_DEPENDENCIES := static/freestanding-runtime-dependencies.json
+PROVISION_OUTPUTS := $(REGISTRY)/translator $(REGISTRY)/typed_cfg \
+	$(REGISTRY)/plugin-map.txt $(REGISTRY)/static-manifest.json
+PROVISION_STAMP := $(REGISTRY)/.provision.stamp
+NORMALIZE_STAMP := $(REGISTRY)/.normalize.stamp
+
+.PHONY: all app provision plugin trace normalize qemu-negative reproducible test clean
+
+all: normalize
+
+$(OUT):
+	mkdir -p $@
+
+app: $(APP)
+
+$(START_OBJ): examples/crc32/start.S | $(OUT)
+	$(AARCH64_CC) -ffreestanding -fno-pie -c -o $@ $<
+
+$(CRC32_OBJ): examples/crc32/crc32.c | $(OUT)
+	$(AARCH64_CC) -O2 -ffreestanding -fno-builtin -fno-pie \
+		-fno-stack-protector -fno-optimize-sibling-calls -c -o $@ $<
+
+$(APP): $(START_OBJ) $(CRC32_OBJ)
+	$(AARCH64_CC) -fno-pie \
+		-fno-stack-protector -fno-optimize-sibling-calls -nostdlib -static \
+		-no-pie -Wl,-Ttext-segment=0x400000 -Wl,-e,_start \
+		-Wl,--build-id=none -o $@ $(START_OBJ) $(CRC32_OBJ)
+
+provision: $(PROVISION_OUTPUTS)
+
+$(PROVISION_STAMP): $(APP) static/provision.py $(RUNTIME_DEPENDENCIES)
+	mkdir -p $(REGISTRY)
+	PYTHONPATH=. $(PYTHON) -m static.provision --elf $(APP) --out-dir $(REGISTRY) \
+		--runtime-profile freestanding-static \
+		--runtime-dependencies $(RUNTIME_DEPENDENCIES)
+	@test -f $(REGISTRY)/translator -a -f $(REGISTRY)/typed_cfg \
+		-a -f $(REGISTRY)/plugin-map.txt -a -f $(REGISTRY)/static-manifest.json
+	touch $@
+
+$(PROVISION_OUTPUTS): $(PROVISION_STAMP)
+	@test -f $@
+
+plugin: $(PLUGIN)
+
+$(PLUGIN): qemu/trace_scope.c | $(OUT)
+	$(HOST_CC) -shared -fPIC -O2 -Wall -Wextra -Werror \
+		-I$(QEMU_SRC)/include -DQEMU_PLUGIN \
+		$< -o $@ $$(pkg-config --cflags --libs glib-2.0)
+
+trace: $(TRACE)
+
+$(TRACE): $(APP) $(PLUGIN) $(PROVISION_STAMP)
+	umask 077; $(QEMU_AARCH64) -plugin $(PLUGIN),map=$(REGISTRY)/plugin-map.txt,log=$@ $(APP)
+	chmod 0600 $@
+
+normalize: $(PATH_OUT) $(EVIDENCE)
+
+$(NORMALIZE_STAMP): $(TRACE) $(PROVISION_STAMP) static/normalize.py
+	umask 077; PYTHONPATH=. $(PYTHON) -m static.normalize \
+		--map $(REGISTRY)/plugin-map.txt --trace $(TRACE) \
+		--typed-cfg $(REGISTRY)/typed_cfg --translator $(REGISTRY)/translator \
+		--static-manifest $(REGISTRY)/static-manifest.json \
+		--output $(PATH_OUT) --evidence $(EVIDENCE)
+	chmod 0600 $(PATH_OUT) $(EVIDENCE)
+	touch $@
+
+$(PATH_OUT) $(EVIDENCE): $(NORMALIZE_STAMP)
+	@test -f $@
+
+qemu-negative: $(APP) $(PLUGIN) $(PROVISION_STAMP)
+	umask 077; PYTHONPATH=. $(PYTHON) -m static.qemu_negative \
+		--qemu $(QEMU_AARCH64) --plugin $(PLUGIN) \
+		--map $(REGISTRY)/plugin-map.txt --binary $(APP) \
+		--work $(OUT)/negative
+
+reproducible: $(APP)
+	$(MAKE) -f Makefile.static OUT=$(OUT)-repro app
+	cmp $(APP) $(OUT)-repro/crc32-aarch64
+
+test:
+	PYTHONPATH=. $(PYTHON) -m unittest discover -s tests -p 'test_static.py' -v
+
+clean:
+	rm -rf $(OUT) $(OUT)-repro

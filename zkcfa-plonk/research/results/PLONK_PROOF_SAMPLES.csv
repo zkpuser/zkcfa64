@@ -1,0 +1,11 @@
+measurement_id,app,path_mode,encoding,ep_len,ep_cap,cfg_len,cfg_cap,constraints,padded,verification_key_path,setup_ms,prove_ms,public_auth_ms,verify_ms,proof_bytes,wall_s,verified,timing_precision,source
+crc32-complete-inline-trim,crc32,complete,inline14,3092,4096,23,32,632805,1048576,inline_trim,120616.207,87543.975,6.612,13.136,1930,210.22,true,full_ms,<run-dir>/plonk-proof-crc32-complete.log
+crc32-complete-pretrimmed,crc32,complete,inline14,3092,4096,23,32,632805,1048576,pretrimmed_vk,119576.852,87568.440,8.313,11.679,1930,209.60,true,full_ms,release-run-2026-08-25
+crc32-shadow-inline-trim,crc32,shadow,inline14,23,32,23,32,18607,32768,inline_trim,4688.231,3322.285,5.196,8.381,1930,8.13,true,full_ms,<run-dir>/plonk-proof-crc32-shadow.log
+crc32-shadow-pretrimmed,crc32,shadow,inline14,23,32,23,32,18607,32768,pretrimmed_vk,4600.328,3253.114,5.136,8.220,1930,9.09,true,full_ms,release-run-2026-08-25
+cubic-complete-inline-trim,cubic,complete,inline14,401,512,80,128,126671,131072,inline_trim,16457.594,11907.462,5.219,9.369,1930,28.78,true,full_ms,<run-dir>/plonk-proof-cubic-complete.log
+matmult-complete-inline-trim,matmult-int,complete,inline14,38,64,42,64,34747,65536,inline_trim,8594,6127,8.106,8.448,1930,,true,rounded_display,release-summary-2026-08-25
+matmult-shadow-inline-trim,matmult-int,shadow,inline14,37,64,42,64,34747,65536,inline_trim,8588,6099,7.951,8.605,1930,,true,rounded_display,release-summary-2026-08-25
+statemate-complete-inline-trim,statemate,complete,inline14,232,256,531,1024,408827,524288,inline_trim,62614.506,45541.949,8.020,11.145,1930,109.59,true,full_ms,<run-dir>/plonk-proof-statemate-complete.log
+wikisort-shadow-inline-trim,wikisort,shadow,inline14,10730,16384,481,512,2679909,4194304,inline_trim,446444.905,403177.057,9.211,1224.229,1930,872.83,true,full_ms,release-run-2026-08-25
+wikisort-shadow-pretrimmed,wikisort,shadow,inline14,10730,16384,481,512,2679909,4194304,pretrimmed_vk,458757.696,403961.771,6.181,25.740,1930,883.90,true,full_ms,release-run-2026-08-25

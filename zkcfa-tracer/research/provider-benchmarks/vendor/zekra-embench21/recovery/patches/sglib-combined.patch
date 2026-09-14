@@ -1,0 +1,27 @@
+--- source/embench-iot-applications/sglib-combined/combined.c
++++ source/embench-iot-applications/sglib-combined/combined.c
+@@ -21,7 +21,7 @@
+ 
+ /* BEEBS heap is just an array */
+ 
+-#define HEAP_SIZE 2048
++#define HEAP_SIZE 8192
+ static char heap[HEAP_SIZE] __attribute__((aligned));
+ 
+ /* General array to sort for all ops */
+@@ -203,11 +203,11 @@
+       struct rbtree e, *t, *the_tree, *te;
+       struct sglib_rbtree_iterator it2;
+ 
+-      // /* Array quicksort */
++      /* Array quicksort */
+ 
+-      // memcpy (array2, array, 100 * sizeof (array[0]));
+-      // SGLIB_ARRAY_SINGLE_QUICK_SORT (int, array2, 100,
+-			// 	     SGLIB_NUMERIC_COMPARATOR);
++      memcpy (array2, array, 100 * sizeof (array[0]));
++      SGLIB_ARRAY_SINGLE_QUICK_SORT (int, array2, 100,
++				     SGLIB_NUMERIC_COMPARATOR);
+ 
+       /* Doubly linked list */
+ 

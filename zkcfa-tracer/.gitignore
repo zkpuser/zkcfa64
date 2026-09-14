@@ -1,0 +1,53 @@
+# OS/editor noise
+.DS_Store
+**/.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environment
+.env
+.env.*
+!.env.example
+.envrc
+
+# Python caches
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Native build artifacts
+build/
+**/build/
+target/
+**/target/
+CMakeFiles/
+**/CMakeFiles/
+CMakeCache.txt
+**/CMakeCache.txt
+cmake_install.cmake
+**/cmake_install.cmake
+compile_commands.json
+**/compile_commands.json
+*.cmake
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.out
+*.elf
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+
+# Local research outputs preserved outside the publication provider
+/research/generated-results/
+/research/local-work/

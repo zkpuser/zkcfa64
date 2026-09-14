@@ -1,0 +1,109 @@
+{
+  "acquisition_measured": false,
+  "active_rows": 128,
+  "addr_bits": 24,
+  "backend": "binius64",
+  "circuits": [
+    {
+      "and_constraints": 10636,
+      "bmul_constraints": 1401,
+      "build_ms": 24.12725,
+      "committed_words": 16384,
+      "constraints_verified": true,
+      "cryptographic_proof_requested": false,
+      "gates": 35452,
+      "imul_constraints": 0,
+      "include_stack": false,
+      "native_constraint_count": 15627,
+      "public_statement_checked": true,
+      "value_words": 15567,
+      "witness_localcheck_ms": 0.595375,
+      "zero_constraints": 3590
+    },
+    {
+      "and_constraints": 11745,
+      "bmul_constraints": 2165,
+      "build_ms": 31.994625,
+      "committed_words": 32768,
+      "constraints_verified": true,
+      "cryptographic_proof_requested": false,
+      "gates": 41212,
+      "imul_constraints": 0,
+      "include_stack": true,
+      "native_constraint_count": 18332,
+      "public_statement_checked": true,
+      "value_words": 18522,
+      "witness_localcheck_ms": 0.635667,
+      "zero_constraints": 4422
+    }
+  ],
+  "constraint_units": "native Binius64 AND, integer multiplication, binary-field multiplication, and ZERO constraints",
+  "edge_capacity": 8,
+  "ep_capacity": 128,
+  "ep_encoding": "inline14",
+  "input_sha256": {
+    "recorded_path": "f32a18113c4d91766760c7e26e157fd1135ae12aefcc5f9461ecab1cfcf26a7a",
+    "translator": "502797cee8523e4d2a82893e8ecea2241d7994f231b92ea7533f94383902c6dc",
+    "typed_cfg": "b13cd8c6486b12f2b0e8aa379d0ccccadb0e49e289f0fd6594b7bd794b922a8f"
+  },
+  "max_multiplicity": 56,
+  "measurement": "difference of independently compiled production relations with and without RawShadow",
+  "nodes": 3,
+  "path_mode": "complete",
+  "profile": "raw24-full-key",
+  "provider_signatures_checked": false,
+  "rayon_num_threads": 8,
+  "research_only": true,
+  "schema": "zkcfa.research.stack-control.v1",
+  "stack_delta": {
+    "and_constraints": 1109,
+    "bmul_constraints": 764,
+    "imul_constraints": 0,
+    "native_constraint_count": 2705,
+    "zero_constraints": 832
+  },
+  "stack_depth_bound": 32767,
+  "stack_pointer_bits": 15,
+  "synthetic": true,
+  "timing_scope": "single-run diagnostic build/local-check timings; not a repeated proving-time experiment",
+  "typed_edges": 5,
+  "case": {
+    "case_id": "L0128-D0032",
+    "families": [
+      "diagonal"
+    ],
+    "L": 128,
+    "active_rows": 128,
+    "ep_capacity": 128,
+    "actual_depth": 32,
+    "zekra_depth_bound": 32,
+    "binius_stack_pointer_bits": 15,
+    "binius_depth_bound": 32767,
+    "call_count": 32,
+    "ret_count": 32,
+    "jmp_count": 64,
+    "nodes": 3,
+    "typed_edges": 5,
+    "edge_capacity": 8,
+    "checks": {
+      "balanced_exact_returns": true,
+      "forward_edges_valid": true,
+      "call_row_hints_valid": true,
+      "actual_depth_attained": true
+    },
+    "sha256": {
+      "translator": "502797cee8523e4d2a82893e8ecea2241d7994f231b92ea7533f94383902c6dc",
+      "typed_cfg": "b13cd8c6486b12f2b0e8aa379d0ccccadb0e49e289f0fd6594b7bd794b922a8f",
+      "recorded_path": "f32a18113c4d91766760c7e26e157fd1135ae12aefcc5f9461ecab1cfcf26a7a",
+      "events.tsv": "bef2c0ae9769fc2f009ad509d1c77f2d20f0000aeee3be2a87366aaeb4e245a1",
+      "events.json": "47d22c3df1d3e45f7bc0a2df89b24b8fdc201225691d6b75785e244093019347"
+    }
+  },
+  "command": [
+    "/Users/alex/Workspace/lab/zkcfa64/zkcfa-binius64/zkcfa64/target/release/examples/stack_control",
+    "--typed-dir",
+    "/Users/alex/Workspace/lab/zkcfa64/zkcfa-binius64/research/results/timestamped-stack-2026-09-13/inputs/L0128-D0032",
+    "--ep-cap",
+    "128"
+  ]
+}

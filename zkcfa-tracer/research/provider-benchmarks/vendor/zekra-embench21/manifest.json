@@ -1,0 +1,49 @@
+{
+  "applications": [
+    {"elf_sha256": "56d187a670c5cc6eac462a280bba0707542806bea49fcc5a9aa9f73b1a005252", "name": "aha-mont64", "runtime_profile": "ubuntu20", "sources": ["mont64.c", "beebsc.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "caaf9918a95c595473ce583d3430a97c77d5b83c1c9767f9a83b36b6270d590d", "name": "crc32", "runtime_profile": "ubuntu22", "sources": ["beebsc.c", "crc_32.c", "main.c"], "toolchain": "ubuntu22-gcc11"},
+    {"elf_sha256": "c9b14aa736f74af98cfe7b75e2fcd18fa45d9a7276e916def3bd6aac660ed729", "name": "cubic", "runtime_profile": "ubuntu20", "sources": ["libcubic.c", "beebsc.c", "main.c", "basicmath_small.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "953d5c491a6b461c6e65c4a780857b6f601294a803a56606623211b7913897c2", "name": "edn", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "libedn.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "44b657969de085d253ec93ad172adb0d54e96c5a7cc8140877f1f1a5efd842e2", "name": "huffbench", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "libhuffbench.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "451ab225944d39f75fc39f7fb1b8376acf7d6228fdd954aabcb495441ba4370b", "name": "matmult-int", "runtime_profile": "ubuntu20", "sources": ["matmult-int.c", "beebsc.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "32c06331005cbb4383a849f0a82c20aa76030b142c182f36d8407977a736d700", "name": "md5sum", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "md5.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "462a5c9fd4768cb9522523616754a0999b2349a8cfb8b634b233cd061c1d7704", "name": "minver", "runtime_profile": "ubuntu20", "sources": ["libminver.c", "beebsc.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "d01c22b36cce8dd579b089bf50678457f645beb7a7dbd08f39d0f0474e4275ae", "name": "nbody", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "nbody.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "d85fac4ff34d04b1ee787206bf1a58dc6c05c7b3bbb1694689d3b68fe17ee5e4", "name": "nettle-aes", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "nettle-aes.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "26f176138b34be49bd0bbcc679024060f9a5bb44ec2c52ab5a62cdb8c0b42c31", "name": "nettle-sha256", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "nettle-sha256.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "a429419facc4baad18452c0f607df04ad3fc1446938394987b3d848a59456833", "name": "nsichneu", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "libnsichneu.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "f4fcd5cbc97e4fa1de1e36a1dd0515c1df828ff55623388f8726357337abb1eb", "indirect_policy": "policies/picojpeg.json", "name": "picojpeg", "runtime_profile": "ubuntu20", "sources": ["picojpeg_test.c", "beebsc.c", "main.c", "libpicojpeg.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "8c7d7d8fe338ad16061d040e1326f20113456207e3dc8fbd0ac988b34957b4dd", "name": "primecount", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "primecount.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "757ba17e2aa75ee2cbb00ee602b48c80ccbb1e6c9ef1499f2a111da8dd7c42cc", "indirect_policy": "policies/sglib-combined.json", "name": "sglib-combined", "runtime_profile": "ubuntu20", "sources": ["combined.c", "beebsc.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "fe95187131e6bc57fa14d6a0e8f129534e9882631a05e15a3b07cf071b97c870", "name": "slre", "runtime_profile": "ubuntu20", "sources": ["libslre.c", "beebsc.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "8cd5ba1993e804fcfbb1fbeae08534f680e1092748f715a5eb15b920eec3cfcb", "name": "st", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "libst.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "cb2cfb11358d6c8b6179726510294f170216bf47a87388ba3a980acff462dc79", "name": "statemate", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "libstatemate.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "69e4d242e73b7ed5ba3bc53203979e9fc2f5e18e00527d9e28e09634eb39a26a", "name": "tarfind", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "tarfind.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "68fd088da52b95ad44432c5aaf11178527ea63b20875276d9b9156ce96b7abb8", "name": "ud", "runtime_profile": "ubuntu20", "sources": ["libud.c", "beebsc.c", "main.c"], "toolchain": "ubuntu20-gcc9"},
+    {"elf_sha256": "99cfa2d969b46a9816b7ba70a1c267c4c783de4f55051f80a6b4a78e15603875", "indirect_policy": "policies/wikisort.json", "name": "wikisort", "runtime_profile": "ubuntu20", "sources": ["beebsc.c", "main.c", "libwikisort.c"], "toolchain": "ubuntu20-gcc9"}
+  ],
+  "canonical_bias": "0x400000",
+  "toolchains": {
+    "ubuntu20-gcc9": {
+      "apt_snapshot": "20260701T000000Z",
+      "argv_prefix": ["gcc", "-o", "${OUTPUT}"],
+      "argv_suffix": ["-Os", "-g0", "-lm", "-fno-optimize-sibling-calls"],
+      "base_image": "ubuntu:20.04@sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214",
+      "gcc_fullversion": "9.4.0",
+      "runtime_profile": "ubuntu20",
+      "source_order": "explicit per-application manifest order"
+    },
+    "ubuntu22-gcc11": {
+      "apt_snapshot": "20260701T000000Z",
+      "argv_prefix": ["gcc", "-o", "${OUTPUT}"],
+      "argv_suffix": ["-Os", "-g0", "-lm", "-fno-optimize-sibling-calls"],
+      "base_image": "ubuntu:22.04@sha256:0e0a0fc6d18feda9db1590da249ac93e8d5abfea8f4c3c0c849ce512b5ef8982",
+      "gcc_fullversion": "11.4.0",
+      "runtime_profile": "ubuntu22",
+      "source_order": "explicit per-application manifest order"
+    }
+  },
+  "root_symbol": "main",
+  "schema": "zkcfa.embench21-manifest.v1",
+  "source_revision": "01a0152bfd9812a0569dce19965e7e92df30015d"
+}

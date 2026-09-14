@@ -1,0 +1,32 @@
+{
+  "case_id": "L0512-D0008",
+  "families": [
+    "length"
+  ],
+  "L": 512,
+  "active_rows": 512,
+  "ep_capacity": 512,
+  "actual_depth": 8,
+  "zekra_depth_bound": 8,
+  "binius_stack_pointer_bits": 15,
+  "binius_depth_bound": 32767,
+  "call_count": 128,
+  "ret_count": 128,
+  "jmp_count": 256,
+  "nodes": 3,
+  "typed_edges": 5,
+  "edge_capacity": 8,
+  "checks": {
+    "balanced_exact_returns": true,
+    "forward_edges_valid": true,
+    "call_row_hints_valid": true,
+    "actual_depth_attained": true
+  },
+  "sha256": {
+    "translator": "502797cee8523e4d2a82893e8ecea2241d7994f231b92ea7533f94383902c6dc",
+    "typed_cfg": "b13cd8c6486b12f2b0e8aa379d0ccccadb0e49e289f0fd6594b7bd794b922a8f",
+    "recorded_path": "7a12816097fd0a5b2af482a7dc3b41067352dcbb934da362cc309816bd316a58",
+    "events.tsv": "eb86748f18aa161615972d6fb0c63860784e8f6532bad79e1931e124ebf799ba",
+    "events.json": "4ed543740369cf9d4c7918295552fe323ad356cd374c3b57b48a3cfd312e7c22"
+  }
+}

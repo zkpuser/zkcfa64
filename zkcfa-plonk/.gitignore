@@ -1,0 +1,36 @@
+# Rust build artifacts
+**/target/
+**/*.rs.bk
+*.pdb
+
+# Generated proof/key/output files
+output/
+**/output/
+*.bin
+
+# Provider-generated application bundles. Keep only the layout documentation.
+/input/*
+!/input/README.md
+
+# Local environment
+.env
+.env.*
+.envrc
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Debug/backup files
+*.dSYM/
+*.bak
+*.backup
+*.old
+*.tmp

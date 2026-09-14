@@ -1,0 +1,6 @@
+# Image builds need only the Dockerfiles and Python lock. Source snapshots,
+# circuit/witness artifacts, and experiment logs never enter the build context.
+**
+!Dockerfile.zekra-paper22
+!Dockerfile.zekra-native
+!requirements-paper22.txt

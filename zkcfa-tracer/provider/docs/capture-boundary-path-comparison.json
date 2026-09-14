@@ -1,0 +1,149 @@
+[
+  {
+    "app": "aha-mont64",
+    "complete_unchanged": true,
+    "old_shadow_rows": 115,
+    "new_shadow_rows": 226,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "crc32",
+    "complete_unchanged": true,
+    "old_shadow_rows": 23,
+    "new_shadow_rows": 26,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "cubic",
+    "complete_unchanged": true,
+    "old_shadow_rows": 401,
+    "new_shadow_rows": 401,
+    "shadow_unchanged": true
+  },
+  {
+    "app": "edn",
+    "complete_unchanged": true,
+    "old_shadow_rows": 140,
+    "new_shadow_rows": 228,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "huffbench",
+    "complete_unchanged": true,
+    "old_shadow_rows": 1442,
+    "new_shadow_rows": 2803,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "matmult-int",
+    "complete_unchanged": true,
+    "old_shadow_rows": 37,
+    "new_shadow_rows": 38,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "md5sum",
+    "complete_unchanged": true,
+    "old_shadow_rows": 441,
+    "new_shadow_rows": 828,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "minver",
+    "complete_unchanged": true,
+    "old_shadow_rows": 224,
+    "new_shadow_rows": 300,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "nbody",
+    "complete_unchanged": true,
+    "old_shadow_rows": 80,
+    "new_shadow_rows": 110,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "nettle-aes",
+    "complete_unchanged": true,
+    "old_shadow_rows": 190,
+    "new_shadow_rows": 323,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "nettle-sha256",
+    "complete_unchanged": true,
+    "old_shadow_rows": 59,
+    "new_shadow_rows": 68,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "nsichneu",
+    "complete_unchanged": true,
+    "old_shadow_rows": 653,
+    "new_shadow_rows": 657,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "picojpeg",
+    "complete_unchanged": true,
+    "old_shadow_rows": 29375,
+    "new_shadow_rows": 34334,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "primecount",
+    "complete_unchanged": true,
+    "old_shadow_rows": 1141,
+    "new_shadow_rows": 1449,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "sglib-combined",
+    "complete_unchanged": true,
+    "old_shadow_rows": 13971,
+    "new_shadow_rows": 18980,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "slre",
+    "complete_unchanged": true,
+    "old_shadow_rows": 651,
+    "new_shadow_rows": 718,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "st",
+    "complete_unchanged": true,
+    "old_shadow_rows": 58,
+    "new_shadow_rows": 69,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "statemate",
+    "complete_unchanged": true,
+    "old_shadow_rows": 106,
+    "new_shadow_rows": 108,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "tarfind",
+    "complete_unchanged": true,
+    "old_shadow_rows": 294,
+    "new_shadow_rows": 467,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "ud",
+    "complete_unchanged": true,
+    "old_shadow_rows": 228,
+    "new_shadow_rows": 304,
+    "shadow_unchanged": false
+  },
+  {
+    "app": "wikisort",
+    "complete_unchanged": true,
+    "old_shadow_rows": 10730,
+    "new_shadow_rows": 6796,
+    "shadow_unchanged": false
+  }
+]

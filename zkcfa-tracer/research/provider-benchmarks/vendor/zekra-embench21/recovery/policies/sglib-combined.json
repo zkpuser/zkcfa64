@@ -1,0 +1,12 @@
+{
+  "application": "sglib-combined",
+  "elf_sha256": "64984e2551069ef2e849e05c83419bdc075b0af93b25d35ad5d2db571674bdeb",
+  "indirect_calls": {
+    "0x402004": [],
+    "0x4025ea": [],
+    "0x4026c8": []
+  },
+  "indirect_jumps": {},
+  "rationale": "The application invokes these iterator APIs with a NULL comparator; no non-NULL callback target is authorized, so execution of a site fails closed.",
+  "schema": "zkcfa.indirect-target-policy.v1"
+}

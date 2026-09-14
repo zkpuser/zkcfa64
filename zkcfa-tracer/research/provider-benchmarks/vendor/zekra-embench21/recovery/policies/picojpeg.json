@@ -1,0 +1,16 @@
+{
+  "application": "picojpeg",
+  "elf_sha256": "14d9fb046c074bd4a3fd22ce4daa117e76fb4b97a856c4e81edcf84ab42810b7",
+  "indirect_calls": {
+    "0x401a5a": ["0x4011b9"]
+  },
+  "indirect_jumps": {
+    "0x401c44": ["0x401c47", "0x401c55", "0x401de0", "0x401ed7", "0x401f01", "0x401f2f", "0x401f33"],
+    "0x4022a0": ["0x4022a3", "0x4022ae", "0x402363", "0x402478", "0x40258d"],
+    "0x4025a7": ["0x4025aa", "0x4025c1", "0x4025d8", "0x4025ef", "0x402606", "0x4026cf"],
+    "0x402ca8": ["0x402cab", "0x402cc1", "0x402db2", "0x402e0f", "0x402e69"],
+    "0x402e83": ["0x402cc1", "0x402de8", "0x402e45", "0x402e86", "0x402e92", "0x402eca"]
+  },
+  "rationale": "One source-level callback target and compiler jump-table targets decoded independently from the exact ELF .rodata tables.",
+  "schema": "zkcfa.indirect-target-policy.v1"
+}

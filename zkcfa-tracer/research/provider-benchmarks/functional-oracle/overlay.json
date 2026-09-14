@@ -1,0 +1,72 @@
+{
+  "applications": [
+    {
+      "base_elf_sha256": "451ab225944d39f75fc39f7fb1b8376acf7d6228fdd954aabcb495441ba4370b",
+      "base_source_sha256": "ed7084d021826bd32dc6c7a56dafc94b260b0f47e0f7e4621b074dc77b4c26f9",
+      "expected_guest_exit_status": 0,
+      "functional_elf_sha256": "551a02c0ddb778645777c50176a3bc7063b60487113b8f31d2c0b0549a77960c",
+      "functional_source_sha256": "1e4295657970bb257e6e9a48c55fc36d6e940b8fa20b86e585b3fff8473825fe",
+      "name": "matmult-int",
+      "observed_benchmark_result": "[[19889638, 21314794], [16940158, 22958442]]",
+      "patch": "patches/matmult-int.patch",
+      "patch_sha256": "cfc3f15858a23ebc9bfdf0df7953d6be759822555573624fd795f7cd6c068753",
+      "reason": "ZEKRA reduced UPPERLIMIT from 20 to 2 but retained the upstream 20x20 result oracle.",
+      "repaired_oracle": "2x2 matrix [[19889638, 21314794], [16940158, 22958442]]",
+      "source": "source/embench-iot-applications/matmult-int/matmult-int.c",
+      "stale_oracle": "upstream 20x20 result matrix"
+    },
+    {
+      "base_elf_sha256": "d01c22b36cce8dd579b089bf50678457f645beb7a7dbd08f39d0f0474e4275ae",
+      "base_source_sha256": "c686fb6a4ba1755fdebe366a517f18775ed1cf3349663148df0985ed88f86703",
+      "expected_guest_exit_status": 0,
+      "functional_elf_sha256": "0d35c90e58c9057e15f074ef11efbfb29bf41ea13e4407badbd9c923e3ae5765",
+      "functional_source_sha256": "fd732d51b52d59ab4092cb0e6654bdda901db410fac3adc2390fbaf4f7d4ecc1",
+      "name": "nbody",
+      "observed_benchmark_result": "-0.16907516382852447",
+      "patch": "patches/nbody.patch",
+      "patch_sha256": "7b65a2edf7f208241c466f63899920a83f2aae6385ab8068eb3cdf612dbe08ca",
+      "reason": "ZEKRA reduced the energy accumulation count from 100 to 1 but retained the 100-sample energy oracle.",
+      "repaired_oracle": "-0.16907516382852447",
+      "source": "source/embench-iot-applications/nbody/nbody.c",
+      "stale_oracle": "-16.907516382852478"
+    },
+    {
+      "base_elf_sha256": "8c7d7d8fe338ad16061d040e1326f20113456207e3dc8fbd0ac988b34957b4dd",
+      "base_source_sha256": "b2e3a69d503c7deceb8f77828782b287d898ba4b7e15ab94af5b5e1db3d8d379",
+      "expected_guest_exit_status": 0,
+      "functional_elf_sha256": "75e38d50790364b2ee54e5c0eb1ac70a8d3de55d7ea3a468f5a6da914f2ceca6",
+      "functional_source_sha256": "ed6472699008a223ed1e749a3554aec9b8f9adad5e4cebc514bf1795006a8810",
+      "name": "primecount",
+      "observed_benchmark_result": "30",
+      "patch": "patches/primecount.patch",
+      "patch_sha256": "c2053974be9699ebf63e26126d1a9c2d0e807ffe99bef8d44f86f3739180dd07",
+      "reason": "ZEKRA reduced the sieve from 42 retained primes to 5 but retained the upstream count oracle.",
+      "repaired_oracle": "30",
+      "source": "source/embench-iot-applications/primecount/primecount.c",
+      "stale_oracle": "3512"
+    },
+    {
+      "base_elf_sha256": "fe95187131e6bc57fa14d6a0e8f129534e9882631a05e15a3b07cf071b97c870",
+      "base_source_sha256": "4d73b54a082a03216124ad6230cc1030db5c5d58ce466c9022b17fcc4f9b9736",
+      "expected_guest_exit_status": 0,
+      "functional_elf_sha256": "18675b07c2da113870fa4149d11ec663bd15a205e3e9fe6dc52fa885d7fe02c1",
+      "functional_source_sha256": "1e6e6d373a4c25837ef07fce7171f51e32a3d3bee1f73221170caecd9fcd6bd8",
+      "name": "slre",
+      "observed_benchmark_result": "47",
+      "patch": "patches/slre.patch",
+      "patch_sha256": "2944328735b4ac66077aa38726de557447925e18592602a2128c4275a27369c7",
+      "reason": "ZEKRA reduced the regex loop from four expressions to two but retained the four-expression sum oracle.",
+      "repaired_oracle": "47",
+      "source": "source/embench-iot-applications/slre/libslre.c",
+      "stale_oracle": "102"
+    }
+  ],
+  "base": {
+    "manifest_sha256": "bb4216e5e87eefb10716c5bfec1b63f0308ec63df148abeec2a4777b070c0221",
+    "recovery_identity": "base ZEKRA source revision plus audited recovery overlay",
+    "recovery_overlay_sha256": "f5ec96bde01835a212d34a1c1c6d4fdb6350cdcafa21975efd70bbc74fced044",
+    "recovery_provenance_sha256": "8612717bb2a7f4efe6d2e2ae1a64bfcd7a2c6b4e0114858cabb8e49d81b127b8",
+    "source_revision": "01a0152bfd9812a0569dce19965e7e92df30015d"
+  },
+  "schema": "zkcfa.embench21-functional-oracle-overlay.v1"
+}

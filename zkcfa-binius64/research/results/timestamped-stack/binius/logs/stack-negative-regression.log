@@ -1,0 +1,9 @@
+   Compiling zkcfa v0.2.0 (/Users/alex/Workspace/lab/zkcfa64/zkcfa-binius64/zkcfa64)
+    Finished `release` profile [optimized] target(s) in 13.53s
+     Running unittests examples/stack_control.rs (target/release/examples/stack_control-fea1a8dd02e6bdc8)
+
+running 1 test
+test raw::tests::device_signed_stack_violations_fail_raw_constraints_with_valid_membership ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 53 filtered out; finished in 0.09s
+

@@ -1,0 +1,46 @@
+{
+  "schema": "zkcfa.paper-data.selection.v1",
+  "run_started_utc": "2026-09-14T10:14:51.487778+00:00",
+  "blocks": {
+    "modes": {
+      "directory": "exports/modes",
+      "manifest_sha256": "793dee134f2a6ea9b744c69d8b93f856fd92b47afc339d9d1934904e8dcbdd4a"
+    },
+    "controls": {
+      "directory": "exports/controls",
+      "manifest_sha256": "881e2030529274578cde8e3fe5aa23f6339d52cb5b4406e79df2a06dfc0f4a43"
+    },
+    "online": {
+      "directory": "exports/online",
+      "manifest_sha256": "b265c559ebbd748313d450309e322462e4c4095040e2009d55e02fa2efbb4e02"
+    },
+    "structural": {
+      "directory": "exports/structural-all",
+      "manifest_sha256": "6a6ccd43a31ad31e167199e8ba31958c21d504a1c5dcd04afda6ab2ac6d9b985"
+    },
+    "matched": {
+      "directory": "exports/matched",
+      "manifest_sha256": "7f5d8ede8e2f1e740d63068c43937315ee04e43466801ec23e9a6ee40c40631c"
+    },
+    "backends": {
+      "directory": "exports/final-applications",
+      "manifest_sha256": "e2d8ff2d6390c013adcd4ae5ce404eb40c2fec690ee4e1f552e29a97055f4411"
+    },
+    "released": {
+      "directory": "exports/released-final",
+      "manifest_sha256": "a21ac935461622bf0fc76796bd59605fda258de1f1872232add969b2a4b8908a"
+    },
+    "repaired": {
+      "directory": "exports/final-applications",
+      "manifest_sha256": "e2d8ff2d6390c013adcd4ae5ce404eb40c2fec690ee4e1f552e29a97055f4411"
+    },
+    "repair-control": {
+      "directory": "exports/repair-control",
+      "manifest_sha256": "82ad66ba0398b388324050e5e0d84bb9dabcee3d2b23440e1f663da4fe2b95b4"
+    },
+    "raw64": {
+      "directory": "exports/final-applications",
+      "manifest_sha256": "e2d8ff2d6390c013adcd4ae5ce404eb40c2fec690ee4e1f552e29a97055f4411"
+    }
+  }
+}

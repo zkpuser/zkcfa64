@@ -1,0 +1,2 @@
+# Preserve the upstream source bytes used by the reproducible ELF hash gate.
+source/** whitespace=-trailing-space

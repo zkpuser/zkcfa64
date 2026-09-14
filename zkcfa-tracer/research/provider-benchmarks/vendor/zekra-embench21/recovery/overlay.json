@@ -1,0 +1,38 @@
+{
+  "applications": [
+    {
+      "base_source_sha256": "0c129c4e2ff50483fd66f2110a7b85534aae28710d935e9de1527df4326889c7",
+      "name": "picojpeg",
+      "patch": "recovery/patches/picojpeg.patch",
+      "patch_sha256": "e633c64fa461ca3c02be84eb8cf02de3bf1099de1b3fc432ad802102ded659fb",
+      "policy": "recovery/policies/picojpeg.json",
+      "policy_sha256": "95dc5e54af13f50c534aa33193f9a81cf681085e7c8ac5b248c5ddff8f79d4df",
+      "reason": "Restore the JPEG payload that is present but commented out in the ZEKRA snapshot, so decode and main verification can complete.",
+      "recovered_elf_sha256": "14d9fb046c074bd4a3fd22ce4daa117e76fb4b97a856c4e81edcf84ab42810b7",
+      "recovered_source_sha256": "dd7d4f86ddc716c88cc09b9649f962465949973cb0ca18c6225a518415f1ceb8",
+      "source": "source/embench-iot-applications/picojpeg/picojpeg_test.c",
+      "upstream_source_sha256": "d41425baf9bafd7d07c7a6656d4bf9678d7b85a4b5d4aa93cacda56a3a29d097"
+    },
+    {
+      "base_source_sha256": "665a17bc3976330f9938171020bce4d5a3055ab971ac90082f50be360d836a81",
+      "name": "sglib-combined",
+      "patch": "recovery/patches/sglib-combined.patch",
+      "patch_sha256": "a9af12638fad450e2d25de7c8eeaace4a5a57e1af5836bc3ace62bafcaed1c8e",
+      "policy": "recovery/policies/sglib-combined.json",
+      "policy_sha256": "bdba189495c7f0f66354427fd35e266c7c2628e5a5f5d4fe56c5c24c43ec1904",
+      "reason": "Provide enough x86-64 BEEBS heap for all 300 nodes and restore the quicksort that the unchanged verifier requires.",
+      "recovered_elf_sha256": "64984e2551069ef2e849e05c83419bdc075b0af93b25d35ad5d2db571674bdeb",
+      "recovered_source_sha256": "8b219b35bff52f6cad7af62cf920f1d5e4e2032c17f6a933265b5138cd00c3be",
+      "source": "source/embench-iot-applications/sglib-combined/combined.c",
+      "upstream_source_sha256": "24058cbcc06ac1ed679442ab8fced3782e92eefdb7b82947c4537c13a31d0f1c"
+    }
+  ],
+  "base_manifest_sha256": "e2fb14a493c2f5cdc276b1386cb90135be1b19eb2baf6f28173e95b3e3f71db6",
+  "base_source_revision": "01a0152bfd9812a0569dce19965e7e92df30015d",
+  "schema": "zkcfa.embench21-recovery-overlay.v1",
+  "upstream_reference": {
+    "commit": "0466a18e4f6b47e19598d7c6ba72916d54b68f65",
+    "repository": "https://github.com/embench/embench-iot.git",
+    "tag": "embench-1.0"
+  }
+}

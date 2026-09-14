@@ -1,0 +1,4 @@
+# The image copies nothing from the repo (it is bind-mounted at runtime),
+# so keep the build context empty — zkcfa64/target/ and the submodules are
+# gigabytes.
+*

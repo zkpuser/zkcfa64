@@ -1,0 +1,16 @@
+services:
+  zekra-paper22:
+    build:
+      context: .
+      dockerfile: Dockerfile.zekra-paper22
+      platforms: [linux/amd64]
+    platform: linux/amd64
+    image: zkcfa-zekra:paper-ubuntu22.04
+    container_name: ${ZEKRA_CONTAINER_NAME:-zekra-paper22}
+    volumes:
+      - ./ZEKRA:/workspace/ZEKRA:ro
+      - ./reproduce/sitecustomize.py:/opt/zekra-reproduce-shim/sitecustomize.py:ro
+    working_dir: /workspace/ZEKRA
+    stdin_open: true
+    tty: true
+    command: bash

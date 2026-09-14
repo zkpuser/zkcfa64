@@ -1,0 +1,44 @@
+FROM ubuntu:22.04@sha256:0e0a0fc6d18feda9db1590da249ac93e8d5abfea8f4c3c0c849ce512b5ef8982
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=C.UTF-8 \
+    PYTHONHASHSEED=0 \
+    CC=gcc-11 \
+    CXX=g++-11
+
+# Ubuntu 22.04 / GCC 11 / glibc 2.35 is the environment that reproduces the
+# upstream CRC32 CFG (88 nodes, 106 edges).  Build the Groth16 backend here as
+# well, so extraction and proving use one distribution and compiler toolchain.
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
+        build-essential gcc-11 g++-11 cmake git ca-certificates \
+        libgmp3-dev libprocps-dev libboost-all-dev libssl-dev pkg-config \
+        default-jre default-jdk python3 python3-pip python3-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && test "$(gcc-11 -dumpfullversion)" = "11.4.0"
+
+COPY requirements-paper22.txt /tmp/requirements-paper22.txt
+RUN pip3 install --no-cache-dir -r /tmp/requirements-paper22.txt
+
+# Pin the jsnark revision used by the already validated baseline.  Its gitlink
+# pins libsnark to a37253c and recursive submodule update fixes libff/libfqfft
+# and the remaining native dependencies to their recorded commits.
+WORKDIR /opt
+RUN git config --global url."https://".insteadOf git:// \
+    && git clone https://github.com/akosba/jsnark /opt/jsnark \
+    && git -C /opt/jsnark checkout 0955389d0aae986ceb25affc72edf37a59109250 \
+    && git -C /opt/jsnark submodule update --init --recursive \
+    && test "$(git -C /opt/jsnark rev-parse HEAD)" = "0955389d0aae986ceb25affc72edf37a59109250" \
+    && test "$(git -C /opt/jsnark/libsnark rev-parse HEAD)" = "a37253cb4dfb6f0f9458f7136c87b6baf4a486f1" \
+    && cmake -S /opt/jsnark/libsnark -B /opt/jsnark/libsnark/build \
+             -DMULTICORE=ON -DPERFORMANCE=OFF \
+             -DOPT_FLAGS="-O2" \
+             -DCURVE=ALT_BN128 -DWITH_SUPERCOP=OFF -DUSE_ASM=OFF \
+             -DCMAKE_C_COMPILER=gcc-11 -DCMAKE_CXX_COMPILER=g++-11 \
+    && cmake --build /opt/jsnark/libsnark/build --parallel "$(nproc)" \
+    && ldd /opt/jsnark/libsnark/build/libsnark/jsnark_interface/run_ppzksnark \
+    && ! ldd /opt/jsnark/libsnark/build/libsnark/jsnark_interface/run_ppzksnark | grep -q "not found"
+
+ENV JSNARK_HOME=/opt/jsnark
+
+WORKDIR /workspace/ZEKRA
+CMD ["bash"]

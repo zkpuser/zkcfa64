@@ -1,0 +1,104 @@
+# Operating-system and editor state
+.DS_Store
+**/.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local environments and credentials
+.env
+.env.*
+!.env.example
+.envrc
+*.local.md
+**/settings.local.json
+*.pem
+*.key
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Rust and native build products
+target/
+**/target/
+**/*.rs.bk
+*.pdb
+build/
+**/build/
+CMakeFiles/
+**/CMakeFiles/
+CMakeCache.txt
+**/CMakeCache.txt
+cmake_install.cmake
+**/cmake_install.cmake
+compile_commands.json
+**/compile_commands.json
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.elf
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+
+# Manuscript snapshots stay local and are not published in this repository
+/paper/
+
+# Slide decks and their build state stay local
+/.ppt-build/
+/ppt/
+*.pptx
+*.potx
+
+# LaTeX build intermediates. Rendered manuscript PDFs are retained.
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+/paper/**/*.log
+*.out
+*.toc
+*.synctex.gz
+*.xdv
+
+# zkCFA prover inputs and generated proof output
+/output/
+/tmp/
+/zkcfa-binius64/input/
+/zkcfa-binius64/profile.json
+/zkcfa-binius64/profile.json.gz
+/zkcfa-binius64/*.perfetto-trace
+/zkcfa-binius64/.last_perfetto_trace_path
+/zkcfa-binius64/benchmark_results/
+/zkcfa-binius64/perfetto_traces/
+/zkcfa-binius64/zkcfa64/*.bin
+/zkcfa-binius64/zkcfa64/*.pending-snap
+/zkcfa-plonk/input/*
+!/zkcfa-plonk/input/README.md
+/zkcfa-plonk/output/
+/zkcfa-plonk/**/output/
+/zkcfa-plonk/zkcfa/*.bin
+
+# Provider-generated private bundles and local research output
+/zkcfa-tracer/provider/work/
+/zkcfa-tracer/research/generated-results/
+/zkcfa-tracer/research/local-work/
+
+# ZEKRA local run products outside the ZEKRA submodule
+/zekra/*.log
+/zekra/*.tmp
+/zekra/*.bak

@@ -1,0 +1,435 @@
+{
+  "aggregates": {
+    "application_n": 21,
+    "outcomes": {
+      "host-memory": 1,
+      "proved": 11,
+      "unsatisfiable": 9
+    },
+    "verified_n": 11
+  },
+  "definition": "Original released legacy statements and jar, with all failures retained. The separate CRC32 500/500 positive control is excluded from application counts. These are not matched QEMU inputs.",
+  "rows": [
+    {
+      "application": "crc32-control-500",
+      "excluded_control": true,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 500,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 500,
+        "stack_depth": 15
+      },
+      "prove_s": 4.4769,
+      "r1cs_constraints": 336230,
+      "setup_s": 9.9176,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.005
+    },
+    {
+      "application": "aha-mont64",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 128,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 128,
+        "stack_depth": 15
+      },
+      "prove_s": 1.2121,
+      "r1cs_constraints": 78711,
+      "setup_s": 2.4411,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0049
+    },
+    {
+      "application": "crc32",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 128,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 32,
+        "stack_depth": 15
+      },
+      "prove_s": 0.7376,
+      "r1cs_constraints": 35526,
+      "setup_s": 1.1801,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0048
+    },
+    {
+      "application": "cubic",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 16,
+        "stack_depth": 15
+      },
+      "prove_s": 1.0549,
+      "r1cs_constraints": 48635,
+      "setup_s": 1.8521,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0049
+    },
+    {
+      "application": "edn",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 512,
+        "stack_depth": 15
+      },
+      "prove_s": 3.8937,
+      "r1cs_constraints": 289862,
+      "setup_s": 7.8302,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.005
+    },
+    {
+      "application": "huffbench",
+      "excluded_control": false,
+      "failure_type": "native-oom",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 2048,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 1073260,
+      "status": "host-memory",
+      "verified": false
+    },
+    {
+      "application": "matmult-int",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 128,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 64,
+        "stack_depth": 15
+      },
+      "prove_s": 1.0082,
+      "r1cs_constraints": 49642,
+      "setup_s": 1.592,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0048
+    },
+    {
+      "application": "md5sum",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 512,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 289862,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "minver",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 256,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 164787,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "nbody",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 128,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 64,
+        "stack_depth": 15
+      },
+      "prove_s": 0.8745,
+      "r1cs_constraints": 49642,
+      "setup_s": 1.6283,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0049
+    },
+    {
+      "application": "nettle-aes",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 256,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 164787,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "nettle-sha256",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 128,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 104561,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "nsichneu",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 1024,
+        "bucket_bw": 8,
+        "label_bw": 11,
+        "levels": 15,
+        "path_len": 1024,
+        "stack_depth": 15
+      },
+      "prove_s": 9.5414,
+      "r1cs_constraints": 724837,
+      "setup_s": 18.0344,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.005
+    },
+    {
+      "application": "picojpeg",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 1024,
+        "bucket_bw": 8,
+        "label_bw": 11,
+        "levels": 15,
+        "path_len": 512,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 461926,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "primecount",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 128,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 1024,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 515277,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "sglib-combined",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 1024,
+        "bucket_bw": 8,
+        "label_bw": 11,
+        "levels": 15,
+        "path_len": 1024,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 724837,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "slre",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 512,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 1024,
+        "stack_depth": 15
+      },
+      "prove_s": 7.8261,
+      "r1cs_constraints": 604324,
+      "setup_s": 15.7699,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0054
+    },
+    {
+      "application": "st",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 128,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 128,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 78711,
+      "status": "unsatisfiable",
+      "verified": false
+    },
+    {
+      "application": "statemate",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 512,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 128,
+        "stack_depth": 15
+      },
+      "prove_s": 2.3555,
+      "r1cs_constraints": 156498,
+      "setup_s": 4.2519,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0051
+    },
+    {
+      "application": "tarfind",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 128,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 512,
+        "stack_depth": 15
+      },
+      "prove_s": 3.1721,
+      "r1cs_constraints": 262093,
+      "setup_s": 6.8304,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0049
+    },
+    {
+      "application": "ud",
+      "excluded_control": false,
+      "n": 1,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 256,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 256,
+        "stack_depth": 15
+      },
+      "prove_s": 2.2983,
+      "r1cs_constraints": 164787,
+      "setup_s": 5.3898,
+      "status": "proved",
+      "verified": true,
+      "verify_s": 0.0051
+    },
+    {
+      "application": "wikisort",
+      "excluded_control": false,
+      "failure_type": "unsatisfied-witness",
+      "n": 0,
+      "parameters": {
+        "addr_bw": 24,
+        "adjlist_len": 512,
+        "bucket_bw": 7,
+        "label_bw": 10,
+        "levels": 15,
+        "path_len": 256,
+        "stack_depth": 15
+      },
+      "r1cs_constraints": 219154,
+      "status": "unsatisfiable",
+      "verified": false
+    }
+  ],
+  "schema": "zkcfa.final-reproduction.applications.released.v1"
+}

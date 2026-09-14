@@ -1,0 +1,11 @@
+--- source/embench-iot-applications/primecount/primecount.c
++++ source/embench-iot-applications/primecount/primecount.c
+@@ -101,7 +101,7 @@
+  * execution time as close as possible to 4000 ms for the baseline */
+ #define SZ 5
+ /* Number of prime numbers we expect to find */
+-#define NPRIMES 3512
++#define NPRIMES 30
+ 
+ int32_t countPrimes(){
+   int32_t primes[SZ], sieve[SZ];

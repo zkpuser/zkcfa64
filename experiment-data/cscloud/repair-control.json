@@ -1,0 +1,17 @@
+{
+  "definition": "Identical formatted input and circuit size, original jar negative and four-class repaired jar positive. One positive proof; all control timings excluded from performance results.",
+  "rows": [
+    {
+      "control": "SmartMemory-native-field",
+      "encoded_adjacency_max_bits": 39,
+      "excluded_from_formal_timings": true,
+      "original_sample_satisfied": false,
+      "r1cs_constraints": 71419,
+      "repaired_verified": true,
+      "truncated_memory_operand": 33566722,
+      "validated": true,
+      "witness_operand": 274911473666
+    }
+  ],
+  "schema": "zkcfa.final-reproduction.applications.repair-control.v1"
+}

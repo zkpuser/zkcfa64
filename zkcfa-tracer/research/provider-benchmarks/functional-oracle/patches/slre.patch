@@ -1,0 +1,11 @@
+--- source/embench-iot-applications/slre/libslre.c
++++ source/embench-iot-applications/slre/libslre.c
+@@ -613,7 +613,7 @@
+ int
+ verify_benchmark (int r)
+ {
+-  return 102 == r;
++  return 47 == r;
+ }
+ 
+ 

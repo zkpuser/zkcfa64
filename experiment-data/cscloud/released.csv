@@ -1,0 +1,23 @@
+application,status,verified,n,parameters,r1cs_constraints,excluded_control,setup_s,prove_s,verify_s,failure_type
+crc32-control-500,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 500, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 500, ""stack_depth"": 15}",336230,True,9.9176,4.4769,0.005,
+aha-mont64,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 128, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 128, ""stack_depth"": 15}",78711,False,2.4411,1.2121,0.0049,
+crc32,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 128, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 32, ""stack_depth"": 15}",35526,False,1.1801,0.7376,0.0048,
+cubic,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 16, ""stack_depth"": 15}",48635,False,1.8521,1.0549,0.0049,
+edn,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 512, ""stack_depth"": 15}",289862,False,7.8302,3.8937,0.005,
+huffbench,host-memory,False,0,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 2048, ""stack_depth"": 15}",1073260,False,,,,native-oom
+matmult-int,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 128, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 64, ""stack_depth"": 15}",49642,False,1.592,1.0082,0.0048,
+md5sum,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 512, ""stack_depth"": 15}",289862,False,,,,unsatisfied-witness
+minver,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 256, ""stack_depth"": 15}",164787,False,,,,unsatisfied-witness
+nbody,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 128, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 64, ""stack_depth"": 15}",49642,False,1.6283,0.8745,0.0049,
+nettle-aes,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 256, ""stack_depth"": 15}",164787,False,,,,unsatisfied-witness
+nettle-sha256,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 128, ""stack_depth"": 15}",104561,False,,,,unsatisfied-witness
+nsichneu,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 1024, ""bucket_bw"": 8, ""label_bw"": 11, ""levels"": 15, ""path_len"": 1024, ""stack_depth"": 15}",724837,False,18.0344,9.5414,0.005,
+picojpeg,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 1024, ""bucket_bw"": 8, ""label_bw"": 11, ""levels"": 15, ""path_len"": 512, ""stack_depth"": 15}",461926,False,,,,unsatisfied-witness
+primecount,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 128, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 1024, ""stack_depth"": 15}",515277,False,,,,unsatisfied-witness
+sglib-combined,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 1024, ""bucket_bw"": 8, ""label_bw"": 11, ""levels"": 15, ""path_len"": 1024, ""stack_depth"": 15}",724837,False,,,,unsatisfied-witness
+slre,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 512, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 1024, ""stack_depth"": 15}",604324,False,15.7699,7.8261,0.0054,
+st,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 128, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 128, ""stack_depth"": 15}",78711,False,,,,unsatisfied-witness
+statemate,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 512, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 128, ""stack_depth"": 15}",156498,False,4.2519,2.3555,0.0051,
+tarfind,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 128, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 512, ""stack_depth"": 15}",262093,False,6.8304,3.1721,0.0049,
+ud,proved,True,1,"{""addr_bw"": 24, ""adjlist_len"": 256, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 256, ""stack_depth"": 15}",164787,False,5.3898,2.2983,0.0051,
+wikisort,unsatisfiable,False,0,"{""addr_bw"": 24, ""adjlist_len"": 512, ""bucket_bw"": 7, ""label_bw"": 10, ""levels"": 15, ""path_len"": 256, ""stack_depth"": 15}",219154,False,,,,unsatisfied-witness

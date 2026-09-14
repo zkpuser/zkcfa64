@@ -1,0 +1,250 @@
+{
+  "experiment_scope": "synthetic same-source relation tests; no acquired trace, provider signature, or online acceptance claim",
+  "final_repair": {
+    "changed_classes": [
+      "backend/auxTypes/SmartMemory$2.class",
+      "backend/auxTypes/SmartMemory$3.class",
+      "backend/auxTypes/SmartMemory$4.class",
+      "backend/auxTypes/SmartMemory.class"
+    ],
+    "data_writes": "single full-width (254-bit) native-field write; original 32-bit chunk argument for other types",
+    "execution_sources": {
+      "CheckNativeMemory.java": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/scaling/CheckNativeMemory.java",
+        "sha256": "5c55ebe97c5044936e880d867fe174d1c70c75310ace71986e39593b5f19c403"
+      },
+      "PatchNativeMemory.java": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/scaling/PatchNativeMemory.java",
+        "sha256": "9e9da78374ad7d81877caf4ae3ed39c01d96ddf37b61ab836415092817d72779"
+      },
+      "run_scaling.py": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/scaling/run_scaling.py",
+        "sha256": "85cf2d222abd827fc9e011693eeb76c833a53e91ed5767f4d77b97e8c7468e47"
+      }
+    },
+    "formal_growing_cfg_4096_oom": {
+      "actual_attempts": 1,
+      "compiled_r1cs_constraints": 1406351,
+      "docker_events": [
+        {
+          "action": "oom",
+          "container_id": "16649e0c5177bf111c6f69a4e1c15eb028b2abd6cd117396b2b6e4b509d0e8f5",
+          "exit_code": null,
+          "name": "zkcfa-scaling-8940a10f0c7d4550",
+          "time_unix_ns": 1788848635150487833
+        },
+        {
+          "action": "die",
+          "container_id": "16649e0c5177bf111c6f69a4e1c15eb028b2abd6cd117396b2b6e4b509d0e8f5",
+          "exit_code": "137",
+          "name": "zkcfa-scaling-8940a10f0c7d4550",
+          "time_unix_ns": 1788848635844092625
+        },
+        {
+          "action": "destroy",
+          "container_id": "16649e0c5177bf111c6f69a4e1c15eb028b2abd6cd117396b2b6e4b509d0e8f5",
+          "exit_code": null,
+          "name": "zkcfa-scaling-8940a10f0c7d4550",
+          "time_unix_ns": 1788848636173771708
+        }
+      ],
+      "docker_events_raw": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907-v2/growing-cfg/4096/docker-events.jsonl",
+        "sha256": "9a68e524b06834a84a663b6c78838adf57cb964965afbcb1310bd03e256619b6"
+      },
+      "docker_memory_limit_bytes": 24631996416,
+      "exit_code": 137,
+      "failure_classification": "Docker container OOM during constraint translation; not sample unsatisfaction or cryptographic rejection",
+      "jar_sha256": "b8371b11132ded46b7148deaf05c8b3e2ce7177f3ec3fbc0918a8f85fcc2e685",
+      "last_reported_stage": "Translating Constraints",
+      "measurement": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907-v2/growing-cfg/4096/measurement.json",
+        "sha256": "2c6487755d3951a4caae0f7e7d2c5417eb66a41a82440d0616f29089b3e33a1f"
+      },
+      "native_binary_sha256": "56e7384103ee998a0abc3c11f4b12ca4305f9d067fd84109d615d55dca5ced2a",
+      "planned_repetitions": 3,
+      "plot_policy": "Retain measured circuit-size point; proof time is absent and plotted as OOM, without extrapolation or zero imputation.",
+      "prove_s": null,
+      "prover_log": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907-v2/growing-cfg/4096/04-groth16-r1.log",
+        "sha256": "902ddfd165205abc315cff07dc4f3530605588c404edfe95bb089548c08cf90b"
+      },
+      "qap_count_status": "not emitted because translation did not complete; no contradictory QAP count was observed",
+      "remaining_repetitions_not_executed": 2,
+      "runner_count_error_note": "The preserved raw runner emits a generic count_error when QAP pre degree is None. It is an unavailable count following OOM, not evidence of unequal measured circuit counts.",
+      "sample_satisfaction_evidence": {
+        "compile_log": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907-v2/growing-cfg/4096/03-compile.log",
+          "sha256": "f2145ed36aa3b5fa434f44f623efb980d0b49bbf553bb5178bea11b0d06aa101"
+        },
+        "fresh_arith": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907-v2/growing-cfg/4096/inputs/zekra.arith",
+          "sha256": "84756e5a39e8e915672992c729275e4f44ffac1c1543c4f06fa9158eeb055212"
+        },
+        "fresh_witness": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907-v2/growing-cfg/4096/inputs/zekra_Sample_Run1.in",
+          "sha256": "37ac0d6d1f0563fa326acbc9ef17b1defd7f2971a3ca38943e2be86655520c97"
+        },
+        "gate": "successful_run(stdout) requires exact substring Sample Run: Sample_Run1 finished!; otherwise main prints Error Detected - Circuit was not satisfied with the inputs and raw Java output. No such error occurs in the final compile log.",
+        "note": "Successful raw Java stdout is captured and omitted by upstream compile_circuit.py; this is evidence through its explicit successful_run gate, not an additional independent Java replay.",
+        "upstream_compiler_script": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907-v2/growing-cfg/4096/source/scripts/compile_circuit.py",
+          "sha256": "16d8e2941277cc3541eebf7e3f9d51aeacdb3c75d38ffcdb4db590d93bf5db31"
+        }
+      },
+      "sample_satisfied": true,
+      "setup_s": null,
+      "verify_s": null,
+      "wall_seconds": 261.74709775001975
+    },
+    "jar": {
+      "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-v2-20260907/patched/source/xjsnark_backend.jar",
+      "sha256": "b8371b11132ded46b7148deaf05c8b3e2ce7177f3ec3fbc0918a8f85fcc2e685"
+    },
+    "metadata": "one full native-field limb (254 bits)",
+    "native_data_witness_write_calls_repaired": 7,
+    "negative_positive_control": {
+      "control_record": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-v2-20260907/control.json",
+        "sha256": "d9ae149e3e70d5fd9fac667c0580c04de2a67625e90dff7ad9b991a7fafd5a0c"
+      },
+      "excluded_from_formal_timings": true,
+      "input_sha256": {
+        "recorded_path": "35bdc0ee9a0c2959d4f303d18099151a6be53f62bd572dfcd3d70db1b418d4d8",
+        "translator": "9780e6063db1956a871a3ea8d58856f1aabed4e5560441a490d9b2685211ffa8",
+        "typed_cfg": "205dadbffb884cb1261a157de32a96e8b158a5ce320d2defb992dcb7e2a50345"
+      },
+      "max_encoded_adjacency_bitwidth": 39,
+      "parameters": {
+        "address_bitwidth": 24,
+        "adjlist_len": 128,
+        "adjlist_levels": 4,
+        "bucket_bitwidth": 5,
+        "label_bitwidth": 8,
+        "path_len": 128,
+        "stack_depth": 15
+      },
+      "repaired": {
+        "compile_log": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-v2-20260907/patched/03-compile.log",
+          "sha256": "bdec3b47e4b6d99bdf30305ac5126b9497e666c1f9e487ed6f26c95295abc856"
+        },
+        "compiled_r1cs_constraints": 71419,
+        "groth16_verified": true,
+        "measurement": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-v2-20260907/patched/measurement.json",
+          "sha256": "279ea71905515881b4114634b1766803346b2e806563a0ace5a0e90355dc5cee"
+        },
+        "prover_log": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-v2-20260907/patched/04-groth16-r1.log",
+          "sha256": "53cf648fbbb7808ab06b7d7ee402f686e145b8d1734e0fd89f1458c274a844a6"
+        },
+        "sample_satisfied": true
+      },
+      "same_formatted_input_hashes": {
+        "in_encoded_adjlist": "41c40c210b76c0cf1f2b2fd4c60ba4957b113afa552d1f05eefad4f99f1d395e",
+        "in_encoded_adjlist_digest": "fa07fc9c75245e35cfbb6d3456cabb72641b492a990a3b06cbc3d1d779703d79",
+        "in_final_node": "ad57366865126e55649ecb23ae1d48887544976efea46a48eb5d85a6eeb4d306",
+        "in_initial_node": "922c7954216ccfe7a61def609305ce1dc7c67e225f873f256d30d7a8ee4f404c",
+        "in_nonce_adjlist": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "in_nonce_path": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "in_nonce_translator": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+        "in_nonce_verifier": "0a2b2171bebd4bbfee8c5d1bdebf34793867b45e795ad4bc06795d755c989e83",
+        "in_numified_path": "897745a3db3cdb45457472d353eb9803e9fd2ac31e6df40ff84b2c81455b7c95",
+        "in_recorded_path": "f768d1f8bd10f399c20c235d3f0338d955cc54e54d4106dba5c4fc4822ea693c",
+        "in_recorded_path_digest": "0e57ab7256de9cf049225901008aaece123682d24dbcb748c39d21ff198ca748",
+        "in_translator": "16ab0d4000cccdb3d750094bcbaa41a2f3a246a26e2bf25d3ba71725123921a9",
+        "in_translator_digest": "d7ed190d4425fcf0e66bb598f1c6a1c073667c78c9487c25116d8bc29106ce97"
+      },
+      "upstream": {
+        "assertion": "274911473666*1!=33566722",
+        "compile_log": {
+          "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-v2-20260907/upstream/compile.log",
+          "sha256": "295075c20005784060b64145c22c8017be8f7b79b2c39797e1d7395983e53a1f"
+        },
+        "compiled_r1cs_constraints": 71419,
+        "excluded_from_success_curves": true,
+        "groth16_attempted": false,
+        "memory_equals_witness_modulo_2_32": true,
+        "memory_operand": 33566722,
+        "sample_satisfied": false,
+        "witness_operand": 274911473666
+      }
+    },
+    "predicate": "FieldElement modulus equals the circuit native field modulus"
+  },
+  "non_triggering_diagnostic": {
+    "active_transitions": 1,
+    "excluded_from_formal_timings": true,
+    "max_encoded_adjacency_bitwidth": 33,
+    "nodes": 28,
+    "outcome": "both original and final repaired jars satisfied; the affected network-memory path was not triggered",
+    "repaired_measurement": {
+      "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-20260907/patched/measurement.json",
+      "sha256": "b09d0935227aa250ec35b43bd540169b411811d04f3cfc19f7e8a51f16accd35"
+    },
+    "upstream_compile_log": {
+      "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-memory-control-20260907/upstream/compile.log",
+      "sha256": "4e56267ef925b5fa9dae85dc5e6241508d4ff4d3c772dbf27aa61e3bef85b257"
+    }
+  },
+  "partial_metadata_only_repair": {
+    "encoded_adjacency_entries_above_32_bits": 96,
+    "execution_sources": {
+      "CheckNativeMemory.java": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907/frozen-execution-sources/CheckNativeMemory.java",
+        "sha256": "442286f39fbf8bb29a5ecad562c1cb32f4feae0a5f0172ebd120e963f762efb7"
+      },
+      "PatchNativeMemory.java": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907/frozen-execution-sources/PatchNativeMemory.java",
+        "sha256": "3bd5b7ee468200d9466a7b2875bb4d740fc03113c99c454cc2cd7ccf3a63413b"
+      },
+      "run_scaling.py": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907/frozen-execution-sources/run_scaling.py",
+        "sha256": "fe82ac08a376bd90459cd686c2c53ae1a5cbfa4424c0936eecb7cc67bc18c58f"
+      }
+    },
+    "failure_growing_cfg_4096": {
+      "assertion": "8590199811*1!=265219",
+      "compile_log": {
+        "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907/growing-cfg/4096/03-compile.log",
+        "sha256": "3d46faec79cf4f58def54d35246388d0133760a8e34f9a3c4e2553e8a0f3a3fd"
+      },
+      "compiled_r1cs_constraints": 1406351,
+      "excluded_from_success_curves": true,
+      "groth16_attempted": false,
+      "memory_equals_witness_modulo_2_32": true,
+      "memory_operand": 265219,
+      "sample_satisfied": false,
+      "witness_operand": 8590199811
+    },
+    "input_sha256": {
+      "recorded_path": "b535cbb1b3670610c264cbb9cb6a7da200daba5e8202a39a558c37e1eee7ee8e",
+      "translator": "d6353ed7c337a3e3f105d2631f06ef081cb62e5e2c0b1b3c6aada751d5b68809",
+      "typed_cfg": "b4e862fa6ab58f011680513017c13d8e15986ef6b24ede38c79cd6bbb4390d66"
+    },
+    "jar": {
+      "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907/growing-cfg/4096/source/xjsnark_backend.jar",
+      "sha256": "30f03e7c66b6882e6bcc7a245354c3c912593794ae7accec294a37633bde5fce"
+    },
+    "maximum_encoded_adjacency_bitwidth": 34,
+    "measurement": {
+      "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/reproduce/results/scaling-20260907/growing-cfg/4096/measurement.json",
+      "sha256": "d159d54f40afe618eb523fdeda0304055d06235a814f75b95f74f7600fdba2ca"
+    },
+    "native_field_metadata_after": [
+      254
+    ],
+    "native_field_metadata_before": [
+      30
+    ]
+  },
+  "publication_policy": "Only scaling-20260907-v2 with the final uniform jar contributes successful timing curves. Its 4096 growing-CFG circuit-size point is measured, while proving is OOM. Earlier campaigns and repair controls remain excluded.",
+  "recorded_date": "2026-09-07",
+  "schema": "zkcfa.zekra.scaling-repair-diagnostics.v2",
+  "upstream_jar": {
+    "path": "/Users/alex/Workspace/lab/zkcfa64/zekra/ZEKRA/xjsnark_backend.jar",
+    "sha256": "d6966c45ad659627027d19b4d8389d58a452f82ca416f1057efcdd428fbb535b"
+  },
+  "upstream_revision": "01a0152bfd9812a0569dce19965e7e92df30015d"
+}

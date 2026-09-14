@@ -1,0 +1,42 @@
+{
+  "schema": "zkcfa.research.stack-control-run.v1",
+  "started_utc": "2026-09-13T09:37:06Z",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "logical_cpus": 11,
+  "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+  "cargo": "cargo 1.97.1 (c980f4866 2026-06-30)",
+  "repository_head": "64fefca665ae048ed9dafb9a30dff1ffa2593212",
+  "backend_head": "c56e2027591df056cee5bd741085e110d491f28e",
+  "backend_status": "",
+  "build": "RUSTFLAGS='-C target-cpu=native' cargo build --locked --offline --release --features stack-control --example stack_control",
+  "binary_sha256": "12c8331ccc92c7c32e04e14bccefaa4e3d2f7e15cce7fdb88f5ce032f56ae035",
+  "input_manifest_sha256": "f2caa97b74c58107258d5bbe13e1e3f5e990a7d12693288d591fe929a74005aa",
+  "source_sha256": {
+    "research/tools/experiments/run_stack_control.py": "2502290ff72aca2d8801e03aebda7f0e93139c2826bfdd0e3a6514fe55faa178",
+    "research/tools/experiments/stack_control_inputs.py": "1b84296f3e9e2d1ea8378918868cb1f23841f90c0d8e3921547be11614695a6d",
+    "zkcfa64/examples/stack_control.rs": "8bfa42c74a65368e791ff6a445fad4d95a9730b39634df7ca1174851d424e32a",
+    "zkcfa64/src/raw.rs": "a78b62d8348d5bca973c23a85d0eff3a3ec5e47e994e1ca20458b68203a42f1e",
+    "zkcfa64/src/raw_format.rs": "faed88fae0e613cd7a19fe5062ccd99d5ef91d8039db6274fc0f72dd5d23cedc",
+    "zkcfa64/src/attestation.rs": "6ee9cc92783af8685147b5fc23ee54324b29fad3b660046e696a7058219c9b9e",
+    "zkcfa64/Cargo.toml": "3acb2138b88593f3feefcbc9b3f563d63437d0e924e99b83aea4a6c919862952",
+    "zkcfa64/Cargo.lock": "85389eeca2d6ba40db41de15e8b681f6a17b0ca9deed85c13d018b914e32f61c"
+  },
+  "rayon_num_threads": 8,
+  "unique_cases": 21,
+  "count_repetitions": 1,
+  "proof_cases": [
+    "L0064-D0008",
+    "L1024-D0256"
+  ],
+  "scope": "compiled-constraint differences between the full production relation and its RawShadow-disabled ablation, with both witnesses checked",
+  "units": "native Binius64 AND, integer multiplication, binary-field multiplication, and ZERO constraints; not R1CS-equivalent gates",
+  "constant_parameters": "raw24, InlineHint14, Complete mode, E_capacity=8, SP_BITS=15, depth_bound=32767",
+  "controls": "same fixed 3-node/5-edge CFG; L/4 calls, L/4 returns, L/2 JMP rows including initial JMP; fully occupied EP capacity",
+  "timings": "single-run diagnostics only; no runtime-performance claim",
+  "completed_utc": "2026-09-13T09:37:17Z",
+  "all_constraints_verified": true,
+  "all_requested_proofs_verified": true,
+  "depth_invariance_checked": true,
+  "measurements_sha256": "6d377c4687999eda98683eab4b1bb2b04c60f5fe25d4077a80d56d963c6e1c92"
+}

@@ -1,0 +1,267 @@
+{
+  "schema": "zkcfa.control-results.v1",
+  "sections": {
+    "online": {
+      "authority_provision_ms": 6.81545899988123,
+      "challenge_before_capture": 6,
+      "formal_verified": 5,
+      "interpretation": {
+        "online_scope": "QEMU and protected host orchestration emulate the trusted Tracer; no physical trace protection claim",
+        "phase_sum": "sum of measured local phases; excludes Docker launch/bridge, static provisioning, network, queues and negative-test overhead",
+        "prove_scope": "application runner prove phase includes witness generation and local checks; differs from matched512 cryptographic-only phase",
+        "restart_scope": "SQLite state persisted between independent service instances; no database rollback/crash-injection test",
+        "timing_scope": "one excluded warmup plus five fresh captures and fresh proof processes; all setup repeated",
+        "trace_binding": "challenge-derived context is emitted by the newly launched trusted QEMU plugin and checked on the snapshotted trace before signing; it is not a MAC against a compromised tracer"
+      },
+      "metrics": {
+        "capture_ms": {
+          "max": 24.671915999988414,
+          "median": 24.421165999910954,
+          "min": 23.338708000210318,
+          "n": 5,
+          "samples": [
+            24.671915999988414,
+            24.48233299992353,
+            24.421165999910954,
+            23.338708000210318,
+            23.859125000171844
+          ]
+        },
+        "capture_protocol_block_ms": {
+          "max": 133.09745800006567,
+          "median": 129.23816700003954,
+          "min": 127.87666600002012,
+          "n": 5,
+          "samples": [
+            129.56079100013085,
+            133.09745800006567,
+            129.23816700003954,
+            127.87666600002012,
+            128.53787499989267
+          ]
+        },
+        "challenge_issue_ms": {
+          "max": 1.4396670001133316,
+          "median": 1.3270829999783018,
+          "min": 1.0870420001083403,
+          "n": 5,
+          "samples": [
+            1.3089169999602746,
+            1.0870420001083403,
+            1.3270829999783018,
+            1.3605839999399905,
+            1.4396670001133316
+          ]
+        },
+        "device_report_ms": {
+          "max": 52.480584000022645,
+          "median": 49.85050000004776,
+          "min": 49.52337499980786,
+          "n": 5,
+          "samples": [
+            49.52337499980786,
+            52.480584000022645,
+            49.790708000045925,
+            49.96033299994451,
+            49.85050000004776
+          ]
+        },
+        "normalization_ms": {
+          "max": 22.803959000157192,
+          "median": 21.883290999994642,
+          "min": 21.58595800005969,
+          "n": 5,
+          "samples": [
+            21.58699999995406,
+            22.803959000157192,
+            22.154583000201455,
+            21.883290999994642,
+            21.58595800005969
+          ]
+        },
+        "private_bytes": {
+          "max": 52835,
+          "median": 52835,
+          "min": 52835,
+          "n": 5,
+          "samples": [
+            52835,
+            52835,
+            52835,
+            52835,
+            52835
+          ]
+        },
+        "proof_bytes": {
+          "max": 580416,
+          "median": 580416,
+          "min": 580416,
+          "n": 5,
+          "samples": [
+            580416,
+            580416,
+            580416,
+            580416,
+            580416
+          ]
+        },
+        "proof_prove_ms": {
+          "max": 336.56,
+          "median": 319.681,
+          "min": 311.853,
+          "n": 5,
+          "samples": [
+            324.533,
+            311.853,
+            319.681,
+            313.519,
+            336.56
+          ]
+        },
+        "proof_public_preflight_ms": {
+          "max": 0.434,
+          "median": 0.423,
+          "min": 0.398,
+          "n": 5,
+          "samples": [
+            0.423,
+            0.398,
+            0.398,
+            0.434,
+            0.425
+          ]
+        },
+        "proof_setup_ms": {
+          "max": 1088.357,
+          "median": 1052.72,
+          "min": 1025.154,
+          "n": 5,
+          "samples": [
+            1052.72,
+            1057.814,
+            1025.154,
+            1044.789,
+            1088.357
+          ]
+        },
+        "proof_verify_ms": {
+          "max": 237.549,
+          "median": 217.106,
+          "min": 213.797,
+          "n": 5,
+          "samples": [
+            213.797,
+            217.106,
+            220.54,
+            214.093,
+            237.549
+          ]
+        },
+        "public_bytes": {
+          "max": 3167,
+          "median": 3167,
+          "min": 3167,
+          "n": 5,
+          "samples": [
+            3167,
+            3167,
+            3167,
+            3167,
+            3167
+          ]
+        },
+        "registry_reopen_ms": {
+          "max": 1.027083999815659,
+          "median": 0.9612919998289726,
+          "min": 0.8181660000445845,
+          "n": 5,
+          "samples": [
+            0.8404169998357247,
+            0.9612919998289726,
+            1.027083999815659,
+            1.0063340000669996,
+            0.8181660000445845
+          ]
+        },
+        "report_authentication_ms": {
+          "max": 1.5460000001894514,
+          "median": 1.2218330000450806,
+          "min": 1.1307090001082543,
+          "n": 5,
+          "samples": [
+            1.5388330000405404,
+            1.2218330000450806,
+            1.1307090001082543,
+            1.1424580000038986,
+            1.5460000001894514
+          ]
+        },
+        "sequential_phase_sum_ms": {
+          "max": 1775.6295410004536,
+          "median": 1703.6603340001072,
+          "min": 1678.9893740003306,
+          "n": 5,
+          "samples": [
+            1705.1639159997685,
+            1703.6603340001072,
+            1678.9893740003306,
+            1685.2429580001763,
+            1775.6295410004536
+          ]
+        },
+        "trace_bytes": {
+          "max": 277273,
+          "median": 277273,
+          "min": 277273,
+          "n": 5,
+          "samples": [
+            277273,
+            277273,
+            277273,
+            277273,
+            277273
+          ]
+        },
+        "worker_bundle_ms": {
+          "max": 15.060875000017404,
+          "median": 14.457290999871475,
+          "min": 14.392125000085798,
+          "n": 5,
+          "samples": [
+            15.060875000017404,
+            14.413582999850405,
+            14.392125000085798,
+            14.722584000082861,
+            14.457290999871475
+          ]
+        },
+        "worker_process_wall_ms": {
+          "max": 1752.284582995344,
+          "median": 1658.241332974285,
+          "min": 1646.9091670005582,
+          "n": 5,
+          "samples": [
+            1667.8377920179628,
+            1658.241332974285,
+            1653.6365840001963,
+            1646.9091670005582,
+            1752.284582995344
+          ]
+        }
+      },
+      "preprovisioned_capacity": {
+        "backend": "binius64",
+        "edge_cap": 32,
+        "ep_cap": 4096,
+        "log_inv_rate": 1,
+        "path_mode": "complete",
+        "profile": "raw24-full-key",
+        "schema": "zkcfa.raw.circuit"
+      },
+      "replay_rejections": 6,
+      "stale_capture_rejections": 6,
+      "warmups_verified": 1
+    }
+  },
+  "statistics": "Five verified formal measurements per control; successful excluded warmup required. Mode application rows are single observations."
+}

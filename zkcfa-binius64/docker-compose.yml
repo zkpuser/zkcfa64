@@ -1,0 +1,22 @@
+services:
+  binius-dev:
+    build: .
+    image: zkcfa-binius-dev
+    container_name: zkcfa-binius
+    init: true
+    environment:
+      # Recommended by the Binius64 README for architecture-specific
+      # optimizations; the container runs on the host's native arch.
+      RUSTFLAGS: -C target-cpu=native
+    volumes:
+      # Repo mounted at /data; the working crate lives at /data/zkcfa64
+      - .:/data
+      # Persist crate downloads across container recreation
+      - cargo-registry:/usr/local/cargo/registry
+      - cargo-git:/usr/local/cargo/git
+    working_dir: /data/zkcfa64
+    command: ["sleep", "infinity"]
+
+volumes:
+  cargo-registry:
+  cargo-git:

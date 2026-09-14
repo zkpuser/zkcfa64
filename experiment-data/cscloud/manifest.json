@@ -1,0 +1,104 @@
+{
+  "complete": true,
+  "files_sha256": {
+    "README.md": "0e1859b57a8ee402d112af09c1bab76aceeb3a6fb618fc45354899e5a4befd3f",
+    "backends.csv": "5b8c0305128e7171c0c62b93079a95d32a049161fc87bd7b3d606a284b8e99e5",
+    "backends.json": "2350a9599b0289bde4a165bb7a74cf156ecbec02cae7435cd2658bfd5eaf0e1f",
+    "controls.csv": "57e501bbfc4f0237c14a735adddd3cb8c868eee91ea0cfc5014f612b78700984",
+    "controls.json": "8e3ecb3ca99829596c661d6b0ff7527a68efeb3536d07482b0c51b91547bb5d9",
+    "identities.json": "7b1058fd01cb6ad3e92065f191ace503b9139d0e6d9aa4beb49d0983d92bc4a5",
+    "matched.csv": "2bd5d844ba4e1db7ed0f1f72b52115f0c668075cfef6a48bb9a4465dc24416b1",
+    "matched.json": "c45639cee5610dd216049cbabdd4aa19cd144b422dcbb4c26cab3a969090c3ad",
+    "modes.csv": "fcbff1344e3bb9bed1d534ab9caa8de1e2475b2ffbb7e7e77ac7435ce96a5e1d",
+    "modes.json": "ab8b11c425a262d24bd8b87596c2b9ccf12a18eaebd98036db1c7d19ead912d1",
+    "online.csv": "eefda8e414943b166dd79e9b903df1ebf1cbbdd190e5d31777197a3a4cb04bf4",
+    "online.json": "4c0e8dc562926c774459f4cae00159c1100aa862e10efaebbfa706b349da4405",
+    "raw64.csv": "bf64905d2e25be033b588c7fe3636684757a22b1d3a271b70cd79ce4119a874f",
+    "raw64.json": "477bee3c3477db754eadd40aa46dd7810b1f958762a8413b9946688a6ab919f9",
+    "released.csv": "9a4442cb82f2a90ff59cda9b6ca24cb3a0f097e8b3c052e8174082135daedb1c",
+    "released.json": "92108e0d346ca3e40a0ec914903a846b1b995c3136aa675f74b9220a9a4ceba3",
+    "repair-control.csv": "b8bbc3624f0a390881bdce35e87158825033d72fa0afa99c9e5570ae0c577a57",
+    "repair-control.json": "897f69d4b0ee07236392f5a6aec0d6d8d4054349250159256eafcd0f1361cc9e",
+    "repaired.csv": "141f4c9e646fcb701c0e0a55322482e586a63c21956a13f2a7251ceb7e9bce74",
+    "repaired.json": "153f77ffd1f87db68e2a6b82b3a1f2b969f407cf806a926be4b9b1bc6e921442",
+    "scaling-attempts.csv": "33ab6d51abd3249206aef9f5ec4e86dca489bb8709c341ac7a6bd497181d20de",
+    "scaling.csv": "c0ca1ef546c7a9dcc793118ae971e38c9094fb959a2445d92208966f655ae9ae",
+    "stack.csv": "6e6b0816eef817e102e9ca95558893da2a5042588b240deaaedb721eb2ea68a2",
+    "structural.json": "a4b54bd2547114268929decd862d97f6957270777c4ff9dbaf90bf5d73035de4"
+  },
+  "package_tool_sha256": "1c77d0151d5a26d10e922907ae3690c664cd5affad2bfcd006b38369f8e93a8d",
+  "policy": {
+    "failures_preserved": true,
+    "final_blocks_required": [
+      "modes",
+      "controls",
+      "online",
+      "structural",
+      "matched",
+      "backends",
+      "released",
+      "repaired",
+      "repair-control",
+      "raw64"
+    ],
+    "fresh_measurements_only": true,
+    "logs_included": false,
+    "private_material_included": false,
+    "raw_traces_included": false
+  },
+  "schema": "zkcfa.paper-reproduction.package.v1",
+  "selected_exports": {
+    "backends": {
+      "directory": "exports/final-applications",
+      "manifest": "manifest.json",
+      "manifest_sha256": "e2d8ff2d6390c013adcd4ae5ce404eb40c2fec690ee4e1f552e29a97055f4411"
+    },
+    "controls": {
+      "directory": "exports/controls",
+      "manifest": "evidence.json",
+      "manifest_sha256": "881e2030529274578cde8e3fe5aa23f6339d52cb5b4406e79df2a06dfc0f4a43"
+    },
+    "matched": {
+      "directory": "exports/matched",
+      "manifest": "manifest.json",
+      "manifest_sha256": "7f5d8ede8e2f1e740d63068c43937315ee04e43466801ec23e9a6ee40c40631c"
+    },
+    "modes": {
+      "directory": "exports/modes",
+      "manifest": "manifest.json",
+      "manifest_sha256": "793dee134f2a6ea9b744c69d8b93f856fd92b47afc339d9d1934904e8dcbdd4a"
+    },
+    "online": {
+      "directory": "exports/online",
+      "manifest": "evidence.json",
+      "manifest_sha256": "b265c559ebbd748313d450309e322462e4c4095040e2009d55e02fa2efbb4e02"
+    },
+    "raw64": {
+      "directory": "exports/final-applications",
+      "manifest": "manifest.json",
+      "manifest_sha256": "e2d8ff2d6390c013adcd4ae5ce404eb40c2fec690ee4e1f552e29a97055f4411"
+    },
+    "released": {
+      "directory": "exports/released-final",
+      "manifest": "manifest.json",
+      "manifest_sha256": "a21ac935461622bf0fc76796bd59605fda258de1f1872232add969b2a4b8908a"
+    },
+    "repair-control": {
+      "directory": "exports/repair-control",
+      "manifest": "manifest.json",
+      "manifest_sha256": "82ad66ba0398b388324050e5e0d84bb9dabcee3d2b23440e1f663da4fe2b95b4"
+    },
+    "repaired": {
+      "directory": "exports/final-applications",
+      "manifest": "manifest.json",
+      "manifest_sha256": "e2d8ff2d6390c013adcd4ae5ce404eb40c2fec690ee4e1f552e29a97055f4411"
+    },
+    "structural": {
+      "directory": "exports/structural-all",
+      "manifest": "structural-results.json",
+      "manifest_sha256": "6a6ccd43a31ad31e167199e8ba31958c21d504a1c5dcd04afda6ab2ac6d9b985"
+    }
+  },
+  "selection_sha256": "26e04260110733ad1b689bfadd4329fb24b76615e85652e07afb9ce1815f6e96",
+  "validation_scope": "Pins and statistical coverage checked here; source exporters performed full measurement/log validation. The packager does not reopen private evidence or execute experiments."
+}

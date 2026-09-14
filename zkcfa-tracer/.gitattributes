@@ -1,0 +1,2 @@
+# Unified-diff context markers are byte-pinned fixture data, not source whitespace.
+research/provider-benchmarks/functional-oracle/patches/*.patch -whitespace

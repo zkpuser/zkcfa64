@@ -1,0 +1,7 @@
+services:
+  provider:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: "1"

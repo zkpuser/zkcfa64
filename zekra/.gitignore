@@ -1,0 +1,24 @@
+# Local environment
+.env
+.env.*
+.envrc
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Run/debug outputs in repo root (ZEKRA's own outputs are ignored by its .gitignore)
+*.log
+*.tmp
+*.bak
+
+# Isolated reproduction snapshots and generated proof artifacts
+/output/
+/reproduce/results/

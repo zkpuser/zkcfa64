@@ -1,0 +1,645 @@
+{
+  "aggregates": {
+    "application_n": 21,
+    "unsatisfied_original_repaired_satisfied": [
+      "md5sum",
+      "minver",
+      "nettle-aes",
+      "nettle-sha256",
+      "picojpeg",
+      "primecount",
+      "sglib-combined",
+      "st",
+      "wikisort"
+    ],
+    "unsatisfied_original_repaired_satisfied_n": 9,
+    "unsatisfied_original_repaired_verified": [
+      "md5sum",
+      "minver",
+      "nettle-aes",
+      "nettle-sha256",
+      "picojpeg",
+      "primecount",
+      "sglib-combined",
+      "st",
+      "wikisort"
+    ],
+    "unsatisfied_original_repaired_verified_n": 9,
+    "verified_n": 20
+  },
+  "definition": "Identical original released inputs and parameters with the four-class SmartMemory repair. minver/nettle-aes/md5sum use 1 warmup + 3 formal; other apps and separate CRC32 control use one primary proof. Partial successful repetitions are diagnostic only; no timed aggregate combines these schedules.",
+  "rows": [
+    {
+      "application": "aha-mont64",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 1.2834,
+      "r1cs_constraints": 78711,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 1.2834,
+          "setup_s": 2.3484,
+          "verify_s": 0.0049,
+          "wall_seconds": 6.650131291011348
+        }
+      ],
+      "setup_s": 2.3484,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0049,
+      "wall_seconds": 6.650131291011348,
+      "warmups": 0
+    },
+    {
+      "application": "crc32",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 0.6828,
+      "r1cs_constraints": 35526,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 0.6828,
+          "setup_s": 1.2133,
+          "verify_s": 0.0048,
+          "wall_seconds": 3.5612436669762246
+        }
+      ],
+      "setup_s": 1.2133,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0048,
+      "wall_seconds": 3.5612436669762246,
+      "warmups": 0
+    },
+    {
+      "application": "crc32-control-500",
+      "excluded_control": true,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 4.4644,
+      "r1cs_constraints": 336230,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 4.4644,
+          "setup_s": 8.6632,
+          "verify_s": 0.0048,
+          "wall_seconds": 38.77252800000133
+        }
+      ],
+      "setup_s": 8.6632,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0048,
+      "wall_seconds": 38.77252800000133,
+      "warmups": 0
+    },
+    {
+      "application": "cubic",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 1.0035,
+      "r1cs_constraints": 48635,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 1.0035,
+          "setup_s": 1.6177,
+          "verify_s": 0.0047,
+          "wall_seconds": 6.020886666025035
+        }
+      ],
+      "setup_s": 1.6177,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0047,
+      "wall_seconds": 6.020886666025035,
+      "warmups": 0
+    },
+    {
+      "application": "edn",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 3.6999,
+      "r1cs_constraints": 289862,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 3.6999,
+          "setup_s": 7.855,
+          "verify_s": 0.0049,
+          "wall_seconds": 34.673742084007245
+        }
+      ],
+      "setup_s": 7.855,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0049,
+      "wall_seconds": 34.673742084007245,
+      "warmups": 0
+    },
+    {
+      "application": "huffbench",
+      "excluded_control": false,
+      "failures": [
+        {
+          "failed_attempt_peak_rss_bytes": null,
+          "failure_stage": "huffbench:native-1/1",
+          "failure_type": "cgroup-oom",
+          "returncode": 137,
+          "rss_is_lower_bound": false
+        }
+      ],
+      "n": 0,
+      "original_outcome": "host-memory",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "r1cs_constraints": 1073260,
+      "sample_satisfied": true,
+      "status": "resource-stop-cgroup-oom",
+      "successful_attempt_samples": [],
+      "verified": false,
+      "warmups": 0
+    },
+    {
+      "application": "matmult-int",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 0.8706,
+      "r1cs_constraints": 49642,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 0.8706,
+          "setup_s": 1.6122,
+          "verify_s": 0.0048,
+          "wall_seconds": 4.550841124961153
+        }
+      ],
+      "setup_s": 1.6122,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0048,
+      "wall_seconds": 4.550841124961153,
+      "warmups": 0
+    },
+    {
+      "application": "md5sum",
+      "excluded_control": false,
+      "n": 3,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 3,
+      "planned_warmups": 1,
+      "prove_s": 3.7645,
+      "r1cs_constraints": 289862,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 3.7645,
+          "setup_s": 7.9966,
+          "verify_s": 0.005,
+          "wall_seconds": 33.75621662498452
+        },
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 3.8583,
+          "setup_s": 8.2502,
+          "verify_s": 0.0049,
+          "wall_seconds": 36.428035582997836
+        },
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 3.6794,
+          "setup_s": 7.6508,
+          "verify_s": 0.0052,
+          "wall_seconds": 32.9524541660212
+        }
+      ],
+      "setup_s": 7.9966,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.005,
+      "wall_seconds": 33.75621662498452,
+      "warmups": 1
+    },
+    {
+      "application": "minver",
+      "excluded_control": false,
+      "n": 3,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 3,
+      "planned_warmups": 1,
+      "prove_s": 2.4719,
+      "r1cs_constraints": 164787,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.4718,
+          "setup_s": 5.0341,
+          "verify_s": 0.005,
+          "wall_seconds": 16.40305174997775
+        },
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.4719,
+          "setup_s": 4.8852,
+          "verify_s": 0.0051,
+          "wall_seconds": 16.46278624999104
+        },
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.4728,
+          "setup_s": 5.0084,
+          "verify_s": 0.0051,
+          "wall_seconds": 16.424841707979795
+        }
+      ],
+      "setup_s": 5.0084,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0051,
+      "wall_seconds": 16.424841707979795,
+      "warmups": 1
+    },
+    {
+      "application": "nbody",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 0.8956,
+      "r1cs_constraints": 49642,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 0.8956,
+          "setup_s": 1.6859,
+          "verify_s": 0.0051,
+          "wall_seconds": 4.738070958002936
+        }
+      ],
+      "setup_s": 1.6859,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0051,
+      "wall_seconds": 4.738070958002936,
+      "warmups": 0
+    },
+    {
+      "application": "nettle-aes",
+      "excluded_control": false,
+      "n": 3,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 3,
+      "planned_warmups": 1,
+      "prove_s": 2.5053,
+      "r1cs_constraints": 164787,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.5053,
+          "setup_s": 4.6922,
+          "verify_s": 0.0083,
+          "wall_seconds": 16.502935707976576
+        },
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.619,
+          "setup_s": 4.8159,
+          "verify_s": 0.0055,
+          "wall_seconds": 16.109850124979857
+        },
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.441,
+          "setup_s": 4.8907,
+          "verify_s": 0.0048,
+          "wall_seconds": 15.427525583014358
+        }
+      ],
+      "setup_s": 4.8159,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0055,
+      "wall_seconds": 16.109850124979857,
+      "warmups": 1
+    },
+    {
+      "application": "nettle-sha256",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 1.5484,
+      "r1cs_constraints": 104561,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 1.5484,
+          "setup_s": 3.0872,
+          "verify_s": 0.005,
+          "wall_seconds": 9.682719208009075
+        }
+      ],
+      "setup_s": 3.0872,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.005,
+      "wall_seconds": 9.682719208009075,
+      "warmups": 0
+    },
+    {
+      "application": "nsichneu",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 9.9833,
+      "r1cs_constraints": 724837,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 9.9833,
+          "setup_s": 19.7081,
+          "verify_s": 0.0051,
+          "wall_seconds": 147.14396979101002
+        }
+      ],
+      "setup_s": 19.7081,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0051,
+      "wall_seconds": 147.14396979101002,
+      "warmups": 0
+    },
+    {
+      "application": "picojpeg",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 6.2641,
+      "r1cs_constraints": 461926,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 6.2641,
+          "setup_s": 12.3817,
+          "verify_s": 0.0056,
+          "wall_seconds": 63.869680999952834
+        }
+      ],
+      "setup_s": 12.3817,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0056,
+      "wall_seconds": 63.869680999952834,
+      "warmups": 0
+    },
+    {
+      "application": "primecount",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 6.0411,
+      "r1cs_constraints": 515277,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 6.0411,
+          "setup_s": 13.1867,
+          "verify_s": 0.0049,
+          "wall_seconds": 109.89186166698346
+        }
+      ],
+      "setup_s": 13.1867,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0049,
+      "wall_seconds": 109.89186166698346,
+      "warmups": 0
+    },
+    {
+      "application": "sglib-combined",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 9.4873,
+      "r1cs_constraints": 724837,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 9.4873,
+          "setup_s": 19.2874,
+          "verify_s": 0.0055,
+          "wall_seconds": 143.23327704099938
+        }
+      ],
+      "setup_s": 19.2874,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0055,
+      "wall_seconds": 143.23327704099938,
+      "warmups": 0
+    },
+    {
+      "application": "slre",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 8.1022,
+      "r1cs_constraints": 604324,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 8.1022,
+          "setup_s": 16.5444,
+          "verify_s": 0.0049,
+          "wall_seconds": 126.47249600000214
+        }
+      ],
+      "setup_s": 16.5444,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0049,
+      "wall_seconds": 126.47249600000214,
+      "warmups": 0
+    },
+    {
+      "application": "st",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 1.2114,
+      "r1cs_constraints": 78711,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 1.2114,
+          "setup_s": 2.3561,
+          "verify_s": 0.0052,
+          "wall_seconds": 6.7350735000218265
+        }
+      ],
+      "setup_s": 2.3561,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0052,
+      "wall_seconds": 6.7350735000218265,
+      "warmups": 0
+    },
+    {
+      "application": "statemate",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 2.5498,
+      "r1cs_constraints": 156498,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.5498,
+          "setup_s": 4.8227,
+          "verify_s": 0.0049,
+          "wall_seconds": 17.760789500025567
+        }
+      ],
+      "setup_s": 4.8227,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0049,
+      "wall_seconds": 17.760789500025567,
+      "warmups": 0
+    },
+    {
+      "application": "tarfind",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 3.1147,
+      "r1cs_constraints": 262093,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 3.1147,
+          "setup_s": 8.2415,
+          "verify_s": 0.005,
+          "wall_seconds": 33.75468491599895
+        }
+      ],
+      "setup_s": 8.2415,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.005,
+      "wall_seconds": 33.75468491599895,
+      "warmups": 0
+    },
+    {
+      "application": "ud",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "proved",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 2.4035,
+      "r1cs_constraints": 164787,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 2.4035,
+          "setup_s": 4.9732,
+          "verify_s": 0.0051,
+          "wall_seconds": 16.780424917000346
+        }
+      ],
+      "setup_s": 4.9732,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.0051,
+      "wall_seconds": 16.780424917000346,
+      "warmups": 0
+    },
+    {
+      "application": "wikisort",
+      "excluded_control": false,
+      "n": 1,
+      "original_outcome": "unsatisfiable",
+      "planned_formal_n": 1,
+      "planned_warmups": 0,
+      "prove_s": 3.1636,
+      "r1cs_constraints": 219154,
+      "sample_satisfied": true,
+      "samples": [
+        {
+          "proof_bits_accounting": 1019,
+          "prove_s": 3.1636,
+          "setup_s": 6.8775,
+          "verify_s": 0.005,
+          "wall_seconds": 24.96339962503407
+        }
+      ],
+      "setup_s": 6.8775,
+      "status": "verified",
+      "verified": true,
+      "verify_s": 0.005,
+      "wall_seconds": 24.96339962503407,
+      "warmups": 0
+    }
+  ],
+  "schema": "zkcfa.final-reproduction.applications.repaired.v1"
+}

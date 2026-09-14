@@ -1,0 +1,8 @@
+{
+  "binding": "none",
+  "environment": {},
+  "files": [],
+  "loader_scope": "none",
+  "runtime_profile": "freestanding-static",
+  "schema": "zkcfa.runtime-dependencies"
+}

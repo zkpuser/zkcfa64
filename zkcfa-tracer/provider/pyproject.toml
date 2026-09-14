@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zkcfa-provider"
+version = "1.0.0"
+description = "Signed raw24 QEMU trace provider for ZKCFA"
+requires-python = ">=3.10"
+dependencies = [
+  "capstone==4.0.2",
+  "cryptography==41.0.7",
+  "pyelftools==0.29",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["zkcfa_provider*", "static*"]

@@ -1,0 +1,52 @@
+# Groth16 proving on the HOST architecture, so the baseline is not quoted through emulation.
+#
+# `Dockerfile.zekra-paper22` is pinned to linux/amd64 because angr 9.2.30 ships x86_64 wheels
+# only, and on Apple Silicon that means the whole image — extraction AND proving — runs under
+# Rosetta. Extraction genuinely needs that pin. Proving does not: `run_ppzksnark` consumes the
+# `.arith` and `.in` files, which are architecture-independent text, and needs nothing from
+# angr or Java. So the baseline's timings are measured here instead, natively, and the
+# extraction stays where it reproduces.
+#
+# Build flags differ from paper22 deliberately, and only in ways that make the number FAIRER:
+#
+#   PERFORMANCE=ON, -O3 -march=native   paper22 uses PERFORMANCE=OFF and -O2 because
+#                                       BuildKit's jobserver and `-flto` provoke a GCC ICE
+#                                       there; that penalty is an artifact of the build, not
+#                                       of Groth16.
+#   USE_ASM=OFF                         libsnark's inline assembly is x86_64 only, so it stays
+#                                       off here. Native arm64 without asm still beats emulated
+#                                       x86_64 with it, but this IS a residual handicap and
+#                                       should be stated when quoting.
+#   CURVE=ALT_BN128                     unchanged: the same 254-bit curve ZEKRA's Poseidon
+#                                       assumes.
+#
+# The jsnark and libsnark revisions are the same pins paper22 uses, so the only differences
+# from the reproduction image are the architecture and the optimisation flags.
+
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    LANG=C.UTF-8
+
+RUN apt-get update -y && apt-get install -y --no-install-recommends \
+        build-essential cmake git ca-certificates \
+        libgmp3-dev libprocps-dev libboost-all-dev libssl-dev pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /opt
+RUN git config --global url."https://".insteadOf git:// \
+    && git clone https://github.com/akosba/jsnark /opt/jsnark \
+    && git -C /opt/jsnark checkout 0955389d0aae986ceb25affc72edf37a59109250 \
+    && git -C /opt/jsnark submodule update --init --recursive \
+    && test "$(git -C /opt/jsnark/libsnark rev-parse HEAD)" = "a37253cb4dfb6f0f9458f7136c87b6baf4a486f1" \
+    && cmake -S /opt/jsnark/libsnark -B /opt/jsnark/libsnark/build \
+             -DMULTICORE=ON -DPERFORMANCE=ON \
+             -DOPT_FLAGS="-O3 -march=native" \
+             -DCURVE=ALT_BN128 -DWITH_SUPERCOP=OFF -DUSE_ASM=OFF \
+    && cmake --build /opt/jsnark/libsnark/build --parallel "$(nproc)" \
+    && ! ldd /opt/jsnark/libsnark/build/libsnark/jsnark_interface/run_ppzksnark | grep -q "not found"
+
+ENV JSNARK_HOME=/opt/jsnark
+
+WORKDIR /workspace/ZEKRA
+CMD ["bash"]

@@ -1,0 +1,47 @@
+[package]
+name = "zkcfa"
+version = "0.2.0"
+edition = "2024"
+
+[features]
+default = []
+# Compile a distinct, signature-bound wide-address relation; raw24 remains the default.
+raw64 = []
+# Opt in to the synthetic experiment runners; the signed binary never calls them.
+experiments = []
+# Research-only same-backend membership comparison; production always selects BinMult.
+construction-control = ["experiments", "dep:binius-field"]
+# Research-only differential measurement of the production timestamped stack checker.
+stack-control = ["experiments"]
+
+[[example]]
+name = "scaling"
+required-features = ["experiments"]
+
+[[example]]
+name = "construction_control"
+required-features = ["construction-control"]
+
+[[example]]
+name = "stack_control"
+required-features = ["stack-control"]
+
+[profile.release]
+lto = "thin"
+
+[dependencies]
+anyhow = "1.0"
+base64 = "0.22.1"
+binius-circuits = { path = "../binius64/crates/circuits" }
+binius-core = { path = "../binius64/crates/core" }
+binius-frontend = { path = "../binius64/crates/frontend" }
+binius-field = { path = "../binius64/crates/field", optional = true }
+binius-prover = { path = "../binius64/crates/prover", default-features = false }
+binius-transcript = { path = "../binius64/crates/transcript" }
+binius-verifier = { path = "../binius64/crates/verifier", default-features = false }
+ed25519-dalek = { version = "2.2.0", features = ["pem", "pkcs8"] }
+rand = { version = "0.10.1", default-features = false, features = ["std", "std_rng", "thread_rng"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+hex = "0.4"

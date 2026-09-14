@@ -1,0 +1,20 @@
+name: zkcfa64-embench21
+
+services:
+  builder20:
+    platform: linux/amd64
+    image: ubuntu:20.04@sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214
+    working_dir: /workspace
+    entrypoint: ["/bin/bash", "-lc"]
+
+  builder22:
+    platform: linux/amd64
+    image: ubuntu:22.04@sha256:0e0a0fc6d18feda9db1590da249ac93e8d5abfea8f4c3c0c849ce512b5ef8982
+    working_dir: /workspace
+    entrypoint: ["/bin/bash", "-lc"]
+
+  provider:
+    build:
+      context: ../../zkcfa-tracer/provider
+      dockerfile: Dockerfile
+    working_dir: /provider

@@ -1,0 +1,41 @@
+# Rust build artifacts
+target/
+**/target/
+**/*.rs.bk
+*.pdb
+
+# Cargo
+Cargo.lock
+!zkcfa64/Cargo.lock
+
+# Local environment
+.env
+.env.*
+.envrc
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Profiling and benchmark outputs
+profile.json
+profile.json.gz
+*.perfetto-trace
+.last_perfetto_trace_path
+benchmark_results/
+perfetto_traces/
+
+# Generated binaries/proofs
+*.bin
+*.pending-snap
+/input/
+
+__pycache__/
+*.pyc
